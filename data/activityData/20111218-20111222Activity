@@ -1,0 +1,8 @@
+# Date: 20111218-20111222Activity
+# t_stop = 182900 (HHMMSS)
+# Data is presented as:
+#t-t_stop (hr), Beta Activity (pCi), t-t_stop (hr), Alpha Activity (pCi)
+0.125278,940.51,0.125278,7077.10
+1.766944,309.70,1.766944,2335.65
+2.866389,192.34,2.866389,1928.55
+4.548889,179.30,4.548889,1568.60

@@ -1,0 +1,131 @@
+% ***********************************************************
+% ******************* PHYSICS HEADER ************************
+% ***********************************************************
+% Version 2
+\documentclass[11pt]{article} 
+\usepackage{amsmath} % AMS Math Package
+\usepackage{amsthm} % Theorem Formatting
+\usepackage{amssymb}	% Math symbols such as \mathbb
+\usepackage{graphicx} % Allows for eps images
+\usepackage{multicol} % Allows for multiple columns
+\usepackage{cancel}
+\usepackage[dvips,letterpaper,margin=0.75in,bottom=0.5in]{geometry}
+ % Sets margins and page size
+\pagestyle{empty} % Removes page numbers
+\makeatletter % Need for anything that contains an @ command 
+\renewcommand{\maketitle} % Redefine maketitle to conserve space
+{ \begingroup \vskip 10pt \begin{center} \large {\bf \@title}
+	\vskip 10pt \large \@author \hskip 20pt \@date \end{center}
+  \vskip 10pt \endgroup \setcounter{footnote}{0} }
+\makeatother % End of region containing @ commands
+\renewcommand{\labelenumi}{(\alph{enumi})} % Use letters for enumerate
+% \DeclareMathOperator{\Sample}{Sample}
+\let\vaccent=\v % rename builtin command \v{} to \vaccent{}
+\renewcommand{\v}[1]{\ensuremath{\mathbf{#1}}} % for vectors
+\newcommand{\gv}[1]{\ensuremath{\mbox{\boldmath$ #1 $}}} 
+% for vectors of Greek letters
+\newcommand{\uv}[1]{\ensuremath{\mathbf{\hat{#1}}}} % for unit vector
+\newcommand{\abs}[1]{\left| #1 \right|} % for absolute value
+\newcommand{\avg}[1]{\left< #1 \right>} % for average
+\let\underdot=\d % rename builtin command \d{} to \underdot{}
+\renewcommand{\d}[2]{\frac{d #1}{d #2}} % for derivatives
+\newcommand{\dd}[2]{\frac{d^2 #1}{d #2^2}} % for double derivatives
+\newcommand{\pd}[2]{\frac{\partial #1}{\partial #2}} 
+% for partial derivatives
+\newcommand{\pdd}[2]{\frac{\partial^2 #1}{\partial #2^2}} 
+% for double partial derivatives
+\newcommand{\pdc}[3]{\left( \frac{\partial #1}{\partial #2}
+ \right)_{#3}} % for thermodynamic partial derivatives
+\newcommand{\ket}[1]{\left| #1 \right>} % for Dirac bras
+\newcommand{\bra}[1]{\left< #1 \right|} % for Dirac kets
+\newcommand{\braket}[2]{\left< #1 \vphantom{#2} \right|
+ \left. #2 \vphantom{#1} \right>} % for Dirac brackets
+\newcommand{\matrixel}[3]{\left< #1 \vphantom{#2#3} \right|
+ #2 \left| #3 \vphantom{#1#2} \right>} % for Dirac matrix elements
+\newcommand{\grad}[1]{\gv{\nabla} #1} % for gradient
+\let\divsymb=\div % rename builtin command \div to \divsymb
+\renewcommand{\div}[1]{\gv{\nabla} \cdot #1} % for divergence
+\newcommand{\curl}[1]{\gv{\nabla} \times #1} % for curl
+\let\baraccent=\= % rename builtin command \= to \baraccent
+\renewcommand{\=}[1]{\stackrel{#1}{=}} % for putting numbers above =
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{lem}[thm]{Lemma}
+\theoremstyle{definition}
+\newtheorem{dfn}{Definition}
+\theoremstyle{remark}
+\newtheorem*{rmk}{Remark}
+
+% ***********************************************************
+% ********************** END HEADER *************************
+% ***********************************************************
+\title{RadNet Decay Problems}
+\author{Joshua Moravec}
+\begin{document}
+\maketitle
+\section{Decay}
+Given the number of isotopes as $\mathcal{N} = \mathcal{N}_0 {e}^{-\lambda t}$, $t$ is in hours, and $\mathcal{A}$ as the time derivative of $\mathcal{N}$, we first show that the time derivative of $\mathcal{A}$ produces equation \ref{decay}.
+\begin{equation} \label{decay}
+\d{\mathcal{A}}{t} = -\lambda \mathcal{A}
+\end{equation}
+\begin{gather}
+\mathcal{N} = \mathcal{N}_0 {e}^{-\lambda t} \\
+\d{\mathcal{N}}{t} = \mathcal{A} = -\mathcal{N}_0\lambda{e}^{-\lambda t} \\
+\d{\mathcal{A}}{t} = \lambda\mathcal{N}_0\lambda{e}^{-\lambda t} = -\lambda \mathcal{A}
+\end{gather}
+Now we solve the differential equation to get/check $\mathcal{A}$ again.
+\begin{gather}
+\d{\mathcal{A}}{t} = -\lambda\mathcal{A} \\
+\frac{d\mathcal{A}}{\mathcal{A}} = -\lambda dt \\
+\ln \mathcal{A} = -\lambda t + C \\
+\mathcal{A} = C{e}^{-\lambda t}
+\end{gather}
+Using the data in Table 1 of the handout, we can now determine the constants. For $\alpha$:
+\begin{gather}
+1125 = C{e}^{-\lambda(.25)} \\
+633 = Ce^{-\lambda(.75)} \\
+C = \frac{1125}{e^{-\lambda(.25)}} = 1125e^{\lambda(.25)}\\
+633 = 1125e^{\lambda(.25)}e^{-\lambda(.75)} \\
+633 = 1125e^{-\lambda(.5)} \\
+\lambda = -2\ln\left(\frac{633}{1125}\right) \\
+\lambda \approx 1.1504 \\
+C \approx 1125e^{(1.1504)(.25)} \\
+C \approx 1499.88 \\
+\text{And because } C = \mathcal{N}_0\lambda^2 \text{:} \\
+\mathcal{N}_0 = 1133.33 \\
+\text{Thus for }\alpha\text{:} \\
+A_\alpha \approx 1499.88 e^{-1.1504 t}
+\end{gather}
+Again, with the data from Table 1, we find $\mathcal{A}$ for $\beta$:
+\begin{gather}
+A_\beta = 5712.09e^{-1.1201 t} \\
+\text{Where }\mathcal{N}_0 = 4552.83
+\end{gather}
+
+\section{Determining the Rate}
+Given equation \ref{rate}, we can solve the diffential equation to find the rate at which the particles are being gathered.
+\begin{equation} \label{rate}
+\d{\mathcal{A}}{t} = \mathcal{R} - \lambda\mathcal{A}
+\end{equation}
+\begin{gather}
+\d{\mathcal{A}}{t} + \lambda\mathcal{A} = \mathcal{R} \\
+\mathcal{A} = e^{-I}\int\mathcal{R}e^I dt + Ce^{-I} \\
+\text{Where } I = \int\lambda dt = \lambda t + c \\
+\mathcal{A} = e^{-\lambda t + c}\int\mathcal{R}e^{\lambda t + c}dt + Ce^{-\lambda t + c} \\
+ = Ce^{-\lambda t}\left(\frac{\mathcal{R}e^{\lambda t}}{\lambda}\right) + Ce^{-\lambda t} \\
+ \mathcal{A} = C\left(\frac{\mathcal{R}}{\lambda} + e^{-\lambda t}\right)
+\end{gather}
+Now using the data from the previous section and when $t_{\text{stop}} = 72.73$, we can solve for $\mathcal{R}$:
+\begin{gather}
+1499.88 = C\frac{\mathcal{R}}{1.504} + \cancelto{0}{Ce^{(-1.1504)(72.73)}} \\
+\text{Assuming $C$ will be absorbed by $\mathcal{R}$:}\\
+\mathcal{R}_\alpha = 1725.46 \\
+\mathcal{R}_\beta =  6398.11
+\end{gather}
+We can now find the dose rate (in terms of pCi/$m^3$):
+\begin{gather}
+\mathcal{R}_\alpha/m^3 = \frac{1725.43}{60} = 28.76\frac{\text{pCi}}{m^3} \\
+\mathcal{R}_\beta/m^3 = \frac{6398.11}{60} = 106.635\frac{\text{pCi}}{m^3} 
+\end{gather}
+We must stop here for now. This is due to the fact that we have not discussed what isotope(s) is causing the radiation. We need this information to convert the mean lifetime to rads or sieverts. We also have not discussed the amount of air breathed into the lungs.
+\end{document}

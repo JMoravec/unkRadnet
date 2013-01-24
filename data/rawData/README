@@ -1,0 +1,9 @@
+To compile the data: first check calculate.c to make sure the constants ALPHACALIBRATION and BETACALIBRATION are the correct numbers.
+If not, you will need to recompile the program:
+In Linux: 
+	gcc calculate.c
+will compile the program to a.out
+
+To use the program, simply type (in Linux) ./a.out [data file] 
+this will print the relevant data to the screen to double check the data (the data is truncated when printed to the screen for easier reading)
+This datafile is then used with the other python program to determine the coefficients and the constants
