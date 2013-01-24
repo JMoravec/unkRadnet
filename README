@@ -1,1 +1,3 @@
-This is for the UNK Radnet project.
+These files are for the University of Nebraska at Kearney Physics Radnet research project group. To type data go to the ______ folder.  You can see the README in that folder to see the instructions. To do the curve fitting for each day, go to the _______ folder and follow the instructions there. Finally, if you would like to view, prod, and poke the curve fitted data, see the ______ file.
+
+The project code and data for the project can be found in LICENCE.txt in the home folder. For the curve fitting data code we used zunzun.com's code. That modified code and the licence for that project may be found in the _________ folder.
