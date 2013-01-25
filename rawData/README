@@ -37,7 +37,7 @@ This datafile is then used with the other python program to determine the coeffi
 
 SIXTH: MOVE THE RESULTING FILE TO THE PROPER PLACE
 
-The resulting file will be named: 'STARTDATE-ENDDATEActivity'. 
+The resulting file will be named: 'STARTDATE-ENDDATEActivity'. You're probably going to wwant to move it to the fitToCurve folder to run the splitData.py program on it to get the coeffition numbers for the double exponential.
 To move in Linux, just use your favorite file manager to drag and drop, or if using the terminal:
 	'mv [filename] [destination]'
 will work. If using the terminal and moving lots of data, using the wildcard '*' character will help a lot. eg. 'mv *Activity ../foobar' will move everything that ends with 'Activity' to the directory 'foobar' in one directory up from where you are.
