@@ -9,6 +9,6 @@ The correct organization is:
 t-t_stop (hr), Alpha Activity (pCi),t-t_stop, Beta Activity (pCi)
 
 DEPENDENCIES:
-You will need to have an installation of numpy on your computer to run the python program. This depencency is from the zunzun.com code and is necessary for the curve fitting (you'll get an error if you don't have it)
+You will need to have an installation of numpy and scipy on your computer to run the python program. This depencency is from the zunzun.com code and is necessary for the curve fitting (you'll get an error if you don't have it)
 On Ubuntu:
-	'apt-get install python-numpy'
+	'apt-get install python-numpy python-scipy'

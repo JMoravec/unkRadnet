@@ -6,7 +6,7 @@ We modified the executing python file which fits the data to a double exponentia
 
 DEPENDENCIES:
 For calculate.c, the only dependency is to have a compiler (gcc works well)
-For SplitData.py you will need to have python-numpy installed 
-	For Debian based:
-	'apt-get install python-numpy'
-	should get it working.
+For SplitData.py you will need to have python, numpy, and scipy installed 
+	For Ubuntu based:
+	'apt-get install python-numpy python-scipy '
+	should get the python libraries it working.
