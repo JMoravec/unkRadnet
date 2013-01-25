@@ -1,6 +1,6 @@
 These files are for the University of Nebraska at Kearney Physics Radnet research project group. To type data go to the ./data/rawData folder.  You can see the README in that folder to see the instructions. To do the curve fitting for each day, go to the ./data/activityData folder and follow the instructions there. Finally, if you would like to view, prod, and poke the curve fitted data, see the alphaCoefficients and the betaCoefficients file in the ./data/activityData folder.
 
-The project code and data for the project can be found in LICENCE.txt in the home folder. For the curve fitting data code we used zunzun.com's code. That unmodified code and the licence for that project may be found in the ./curveFitting/pythonequations folder.
+The project code and data for the project can be found in LICENCE.txt in the home folder. For the curve fitting data code we used zunzun.com's code. That unmodified code and the licence for that project may be found in the ./zunzunCode/pythonequations folder.
 
 We modified the executing python file which fits the data to a double exponential curve which can be found in the ./data/activityData folder with a name of splitData.py.
 
