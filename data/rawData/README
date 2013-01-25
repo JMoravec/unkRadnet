@@ -10,6 +10,9 @@ The format is shown at the bottom of this page.
 
 NOTE: THE FORMAT IS VERY PICKY. So follow the format exactly, or you WILL get errors or miscalculations.
 
+SECOND NOTE: USE A TEXT EDITOR WITH A '\n' NEWLINE RETURN. THIS IS HARDCODED IN THE PROGRAM
+Basically this means don't use Windows to type these files (Probably could be easily fixed, but I'm not as familiar with Windows and don't want to take the time to look it up when it works fine on *nix systems). Also make sure to use a text editor and not Office or something similar. 
+
 THIRD: CHECK TO MAKE SURE THE CALIBRATION NUMBERS ARE CORRECT.
 
 Check calculate.c to make sure the constants ALPHACALIBRATION and BETACALIBRATION are the correct numbers. These variables are on line 19,20 of the file at the time of this writing.
