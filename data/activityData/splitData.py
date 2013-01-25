@@ -39,8 +39,9 @@ if __name__ == "__main__":
 	print equation.GetDisplayName(), str(equation.GetDimensionality()) + "D"
 	print equation.fittingTargetDictionary[equation.fittingTarget], '=', equation.CalculateAllDataFittingTarget(equation.solvedCoefficients)
 	print "Fitted Parameters:"
+
 #So we have the coefficients solved. I basically told it to print each value and then append the data to the file.
-# NOTE TO SELF: At first glance, it looks like I may be calculating the coefficients twice for each function (1 to print, 1 print to file) If that's the case, I need to assign those to variables to save comp time
+
 	for i in range(len(equation.solvedCoefficients)):
 		print "    %s = %-.16E" % (equation.GetCoefficientDesignators()[i], equation.solvedCoefficients[i])
 

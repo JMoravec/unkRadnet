@@ -1,11 +1,9 @@
 This is a note to everyone, but mostly for myself for future ideas for the code.
 
-1. Take a look at splitData.py and see if i'm calculating the coefficients twice. might save some time since the program is somewhat slow.
+1. organize the folders/files better.
+	its a bit messy as of right now. could use some cleaning up
 
-2. organize the folders/files better.
-	its a bitt messy as of right now. could use some cleaning up
-
-3. change the programs to print to a better place.
+2. change the programs to print to a better place.
 	not too big of a fan of having the final products in the same folder as all the data. if i change the code to write the file to the correct folder, it would get rid of that clutter.
 
 LONGTERM:
