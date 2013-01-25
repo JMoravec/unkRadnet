@@ -1,3 +1,14 @@
+This folder/program contains the information for the final product. Most of the folder will be occupied by individual date ranges. These files are generated from 'calculate.c' in the ../rawData folder. 
+
+As the files in this folder follow a very specific format, I do not suggest typing them by hand. Instead, use the previously mentioned program to generate the files and then check the numbers with the hard copy in the notebook.
+
+RUNNING THE PROGRAM:
+
 NOTE: Due to an oversight in the code, the data is mislabeld in the has in the data range 20110627-20120202.
 The correct organization is:
 t-t_stop (hr), Alpha Activity (pCi),t-t_stop, Beta Activity (pCi)
+
+DEPENDENCIES:
+You will need to have an installation of numpy on your computer to run the python program. This depencency is from the zunzun.com code and is necessary for the curve fitting (you'll get an error if you don't have it)
+On Ubuntu:
+	'apt-get install python-numpy'

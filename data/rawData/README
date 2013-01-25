@@ -54,3 +54,9 @@ t_stop (HHMMSS)
 t (HHMMSS),DET2(beta,alpha),CFC,DET1(alpha)
 
 FOR THE LOVE OF GOD DON'T PUT SPACES IN-BETWEEN THE NUMBERS
+
+DEPENDENCIES:
+You just need a compiler to compile the program, I suggest gcc
+I believe in Ubuntu:
+	'apt-get install build-essential'
+will get you the necessary programs/libraries
