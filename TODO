@@ -7,3 +7,6 @@ This is a note to everyone, but mostly for myself for future ideas for the code.
 
 3. change the programs to print to a better place.
 	not too big of a fan of having the final products in the same folder as all the data. if i change the code to write the file to the correct folder, it would get rid of that clutter.
+
+LONGTERM:
+Perhaps port the calculate.c program to python to get one cohesive program. shouldn't be too difficult
