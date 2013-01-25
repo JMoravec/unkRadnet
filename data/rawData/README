@@ -1,9 +1,53 @@
-To compile the data: first check calculate.c to make sure the constants ALPHACALIBRATION and BETACALIBRATION are the correct numbers.
-If not, you will need to recompile the program:
-In Linux: 
-	gcc calculate.c
-will compile the program to a.out
+This folder is meant to hold the raw data from the aid dosimetry notebook.
 
-To use the program, simply type (in Linux) ./a.out [data file] 
-this will print the relevant data to the screen to double check the data (the data is truncated when printed to the screen for easier reading)
+FIRST: CREATE A NEW FILE FOR EACH DATE RANGE
+
+Create a new file using the file name of '[start date]-[end date]' without the quotes. The date should be the same format of the 'Sampled Days' from the notebook, YYYYMMDD, eg. 20120129-20120202 for the range Jan. 29 2012 - Feb. 02 2012.
+
+SECOND: ENTER THE DATA
+
+The format is shown at the bottom of this page. 
+
+NOTE: THE FORMAT IS VERY PICKY. So follow the format exactly, or you WILL get errors or miscalculations.
+
+THIRD: CHECK TO MAKE SURE THE CALIBRATION NUMBERS ARE CORRECT.
+
+Check calculate.c to make sure the constants ALPHACALIBRATION and BETACALIBRATION are the correct numbers. These variables are on line 19,20 of the file at the time of this writing.
+
+THIRD(2): CHANGE THE CONSTANTS AND RECOMPILE
+
+If the constants are not correct, change the numbers, save the file, and recompile the program:
+In Linux type this (w/o the quotes) in a terminal: 
+	'gcc calculate.c'
+which will compile the program to a.out
+
+FOURTH: RUN THE PROGRAM
+
+To use the program, simply type in a Linux terminal (w/o the quotes): 
+	'./a.out [data file]'. 
+(or write a script to run the program multiple times)
+
+FIFTH: CHECK OUTPUT WITH DATA BOOK
+
+This will print the relevant data to the screen to double check the data with the hard copy (the data is truncated when printed to the screen for easier reading)
 This datafile is then used with the other python program to determine the coefficients and the constants
+
+SIXTH: MOVE THE RESULTING FILE TO THE PROPER PLACE
+
+The resulting file will be named: 'STARTDATE-ENDDATEActivity'. 
+To move in Linux, just use your favorite file manager to drag and drop, or if using the terminal:
+	'mv [filename] [destination]'
+will work. If using the terminal and moving lots of data, using the wildcard '*' character will help a lot. eg. 'mv *Activity ../foobar' will move everything that ends with 'Activity' to the directory 'foobar' in one directory up from where you are.
+
+FILE FORMAT:
+Every line beginning with a '#' will be ignored. Use this for comments
+Format:
+# Filter number
+# Start Date YYYYMMDD
+# End date   YYYYMMDD
+# Sample Time (in hours)
+# Sample Volume (in m^3)
+t_stop (HHMMSS)
+t (HHMMSS),DET2(beta,alpha),CFC,DET1(alpha)
+
+FOR THE LOVE OF GOD DON'T PUT SPACES IN-BETWEEN THE NUMBERS

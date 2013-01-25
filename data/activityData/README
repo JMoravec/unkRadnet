@@ -1,3 +1,3 @@
-Due to an oversight in the code, the data is mislabeld in the has in the data range 20110627-20120202.
+NOTE: Due to an oversight in the code, the data is mislabeld in the has in the data range 20110627-20120202.
 The correct organization is:
 t-t_stop (hr), Alpha Activity (pCi),t-t_stop, Beta Activity (pCi)
