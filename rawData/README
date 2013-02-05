@@ -50,7 +50,7 @@ Format:
 # End date   YYYYMMDD
 # Sample Time (in hours)
 # Sample Volume (in m^3)
-t_stop (HHMMSS)
+t_stop (HHMMSS),alpha Calibration Number, Beta Calibration Number
 t (HHMMSS),DET2(beta,alpha),CFC,DET1(alpha)
 
 FOR THE LOVE OF GOD DON'T PUT SPACES IN-BETWEEN THE NUMBERS
