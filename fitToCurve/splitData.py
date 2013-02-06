@@ -7,14 +7,13 @@ if os.path.join(sys.path[0][:sys.path[0].rfind(os.sep)], '../..') not in sys.pat
     sys.path.append(os.path.join(sys.path[0][:sys.path[0].rfind(os.sep)], '../..'))
 import pyeq2
 
-if __name__ == "__main__":
-
+def fitToCurve(fileName):
 	equation = pyeq2.Models_2D.Exponential.DoubleExponential()
 
 # What this section does is reads the data from the file given from the initial argument and formats it so the zunzun.com code can read it. We need two separate Strings so we can have two equations found.
 	alpha = 'X\tY\n'
 	beta = 'X\tY\n'
-	f = open(sys.argv[1],'r')
+	f = open(fileName,'r')
 	while f:
 		line = f.readline()
 		if len(line) != 0:
@@ -27,7 +26,6 @@ if __name__ == "__main__":
 		else:
 			break
 
-	fileName = sys.argv[1]
 
 #fit plot to alpha data 
 #This is where the magic happens for fitting the data. As you can see, it uses many calls from the zunzun code while printing and storing the data. I mostly reused an example code from the zunzun source to do this part.
@@ -72,3 +70,6 @@ if __name__ == "__main__":
 	alphaFile.close()
 	betaFile.close()
 	f.close()
+
+if __name__ == "__main__":
+	fitToCurve(sys.argv[1])
