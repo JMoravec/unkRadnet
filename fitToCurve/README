@@ -1,4 +1,4 @@
-This folder/program contains the information for the final product. Most of the folder will be occupied by individual date ranges. These files are generated from 'calculate.c' in the ../rawData folder. 
+This folder/program contains the information for the final product. Most of the folder will be occupied by individual date ranges. These files are generated from 'calculate.py' in the ../rawData folder. 
 
 As the files in this folder follow a very specific format, I do not suggest typing them by hand. Instead, use the previously mentioned program to generate the files and then check the numbers with the hard copy in the notebook.
 
