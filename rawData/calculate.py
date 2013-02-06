@@ -11,56 +11,57 @@ ALPHACALIBRATION = 1.63
 BETACALIBRATION = 1.15
 
 
+def calculate(filename):
 #open file from system arguments
-with open(sys.argv[1],'r') as f:
-	with open(sys.argv[1] + 'Activity','w') as w:
-		for line in f:
-			if len(line) != 0:
-				#check for commented lines
-				if line[0] != '#':
-					#Check if it's the initital value for time and set it
-					#this part is for the legacy typed data which didn't have the calibration numbers in the data textfile
-					if ',' not in line:
-						timeStart = timeToHours(line)
-						alphaCal = ALPHACALIBRATION
-						betaCal = BETACALIBRATION
-						stuff = '# Date: ' + sys.argv[1] + '\n# t_stop = ' + line + '# Alpha Calibration: ' + str(alphaCal) + '\n# Beta Calibration: ' + str(betaCal) + '\n'
-						w.write(stuff)
-						print stuff
-					elif len(line.split(',')) == 3:
-						timeStart,alphaCal,betaCal = line.split(',') 
-						stuff = '# Date: ' + sys.argv[1] + '\n# t_stop = ' + timeStart + '\n# Alpha Calibration: ' + str(alphaCal) + '\n# Beta Calibration: ' + str(float(betaCal)) + '\n'
-						timeStart = timeToHours(timeStart)
-						alphaCal = float(alphaCal)
-						betaCal = float(betaCal)
-						w.write(stuff)
-						print stuff
-					else:
-						#Set the values for each line.
-						time,det2,cfc,det1 = line.split(',')
-						time = timeToHours(time)
-						det2 = int(det2)
-						cfc = int(cfc)
-						det1 = int(det1)
+	with open(sys.argv[1],'r') as f:
+		with open(sys.argv[1] + 'Activity','w') as w:
+			for line in f:
+				if len(line) != 0:
+					#check for commented lines
+					if line[0] != '#':
+						#Check if it's the initital value for time and set it
+						#this part is for the legacy typed data which didn't have the calibration numbers in the data textfile
+						if ',' not in line:
+							timeStart = timeToHours(line)
+							alphaCal = ALPHACALIBRATION
+							betaCal = BETACALIBRATION
+							stuff = '# Date: ' + sys.argv[1] + '\n# t_stop = ' + line + '# Alpha Calibration: ' + str(alphaCal) + '\n# Beta Calibration: ' + str(betaCal) + '\n'
+							w.write(stuff)
+							print stuff
+						elif len(line.split(',')) == 3:
+							timeStart,alphaCal,betaCal = line.split(',') 
+							stuff = '# Date: ' + sys.argv[1] + '\n# t_stop = ' + timeStart + '\n# Alpha Calibration: ' + str(alphaCal) + '\n# Beta Calibration: ' + str(float(betaCal)) + '\n'
+							timeStart = timeToHours(timeStart)
+							alphaCal = float(alphaCal)
+							betaCal = float(betaCal)
+							w.write(stuff)
+							print stuff
+						else:
+							#Set the values for each line.
+							time,det2,cfc,det1 = line.split(',')
+							time = timeToHours(time)
+							det2 = int(det2)
+							cfc = int(cfc)
+							det1 = int(det1)
 
-						#Calculate the other variables for each reading
-						netAB = det2 - cfc
-						netBeta = netAB - det1
-						alphaActivity = det1 * alphaCal
-						betaActivity = netBeta * betaCal
+							#Calculate the other variables for each reading
+							netAB = det2 - cfc
+							netBeta = netAB - det1
+							alphaActivity = det1 * alphaCal
+							betaActivity = netBeta * betaCal
 
-						#This is incase the readings were taken on the next day after the initial stop time (eg. if timeStart is 23:00:00 and the reading is 00:25:00)
-						if time < timeStart:
-							time += 24.0
+							#This is incase the readings were taken on the next day after the initial stop time (eg. if timeStart is 23:00:00 and the reading is 00:25:00)
+							if time < timeStart:
+								time += 24.0
 
-						timeDiff = time - timeStart
-						#set the string for print to file and screen
-						stuff = str(timeDiff) + ',' + str(alphaActivity) + ',' + str(timeDiff) + ',' + str(betaActivity) 
-						print(stuff)
-						stuff += '\n'
-						w.write(stuff)
+							timeDiff = time - timeStart
+							#set the string for print to file and screen
+							stuff = str(timeDiff) + ',' + str(alphaActivity) + ',' + str(timeDiff) + ',' + str(betaActivity) 
+							print(stuff)
+							stuff += '\n'
+							w.write(stuff)
 
 
 
-		w.close()
-	f.close()
+			w.close()
+		f.close()
