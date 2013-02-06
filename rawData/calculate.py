@@ -13,8 +13,8 @@ BETACALIBRATION = 1.15
 
 def calculate(filename):
 #open file from system arguments
-	with open(sys.argv[1],'r') as f:
-		with open(sys.argv[1] + 'Activity','w') as w:
+	with open(filename,'r') as f:
+		with open(filename + 'Activity','w') as w:
 			for line in f:
 				if len(line) != 0:
 					#check for commented lines
@@ -65,3 +65,6 @@ def calculate(filename):
 
 			w.close()
 		f.close()
+
+if __name__ == "__main__":
+	calculate(sys.argv[1])
