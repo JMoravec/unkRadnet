@@ -16,6 +16,9 @@ TO RUN:
 	simply run (without the quotes):
 		'python start.py [dataFile]'
 
+CREATING A NEW DATAFILE:
+	Create a new file using the file name of '[start date]-[end date]' without the quotes. The date should be the same format of the 'Sampled Days' from the notebook, YYYYMMDD, eg. 20120129-20120202 for the range Jan. 29 2012 - Feb. 02 2012. It should also be in the same folder as start.py. The program will move it to rawData after success.
+
 DATAFILE FORMAT:
 Every line beginning with a '#' will be ignored. Use this for comments
 All data entries should be numbers only.
