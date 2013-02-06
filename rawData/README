@@ -10,25 +10,17 @@ The format is shown at the bottom of this page.
 
 NOTE: THE FORMAT IS VERY PICKY. So follow the format exactly, or you WILL get errors or miscalculations.
 
+
 SECOND NOTE: USE A TEXT EDITOR WITH A '\n' NEWLINE RETURN. THIS IS HARDCODED IN THE PROGRAM
 Basically this means don't use Windows to type these files (Probably could be easily fixed, but I'm not as familiar with Windows and don't want to take the time to look it up when it works fine on *nix systems). Also make sure to use a text editor and not Office or something similar. 
 
-THIRD: CHECK TO MAKE SURE THE CALIBRATION NUMBERS ARE CORRECT.
+(This one may not matter as much since I ported the code to python. I haven't looked much into how it reads the lines. But just to be safe, type it in linux.)
 
-Check calculate.c to make sure the constants ALPHACALIBRATION and BETACALIBRATION are the correct numbers. These variables are on line 19,20 of the file at the time of this writing.
 
-THIRD(2): CHANGE THE CONSTANTS AND RECOMPILE
-
-If the constants are not correct, change the numbers, save the file, and recompile the program:
-In Linux type this (w/o the quotes) in a terminal: 
-	'gcc calculate.c'
-which will compile the program to a.out
-
-FOURTH: RUN THE PROGRAM
+THIRD: RUN THE PROGRAM
 
 To use the program, simply type in a Linux terminal (w/o the quotes): 
-	'./a.out [data file]'. 
-(or write a script to run the program multiple times)
+	'python calculate.py [filename]'
 
 FIFTH: CHECK OUTPUT WITH DATA BOOK
 
@@ -56,7 +48,4 @@ t (HHMMSS),DET2(beta,alpha),CFC,DET1(alpha)
 FOR THE LOVE OF GOD DON'T PUT SPACES IN-BETWEEN THE NUMBERS
 
 DEPENDENCIES:
-You just need a compiler to compile the program, I suggest gcc
-I believe in Ubuntu:
-	'apt-get install build-essential'
-will get you the necessary programs/libraries
+You just need python, most Linux distros should ship with it.
