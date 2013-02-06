@@ -22,12 +22,12 @@ THIRD: RUN THE PROGRAM
 To use the program, simply type in a Linux terminal (w/o the quotes): 
 	'python calculate.py [filename]'
 
-FIFTH: CHECK OUTPUT WITH DATA BOOK
+FOURTH: CHECK OUTPUT WITH DATA BOOK
 
 This will print the relevant data to the screen to double check the data with the hard copy (the data is truncated when printed to the screen for easier reading)
 This datafile is then used with the other python program to determine the coefficients and the constants
 
-SIXTH: MOVE THE RESULTING FILE TO THE PROPER PLACE
+FIFTH: MOVE THE RESULTING FILE TO THE PROPER PLACE
 
 The resulting file will be named: 'STARTDATE-ENDDATEActivity'. You're probably going to wwant to move it to the fitToCurve folder to run the splitData.py program on it to get the coeffition numbers for the double exponential.
 To move in Linux, just use your favorite file manager to drag and drop, or if using the terminal:

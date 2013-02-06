@@ -5,7 +5,7 @@ The project code and data for the project can be found in LICENCE.txt in the hom
 We modified the executing python file which fits the data to a double exponential curve which can be found in the ./fitToCurve folder with a name of splitData.py.
 
 DEPENDENCIES:
-For calculate.c, the only dependency is to have a compiler (gcc works well)
+For calculate.py, the only dependency is to have python
 For SplitData.py you will need to have python, numpy, and scipy installed 
 	For Ubuntu based:
 	'apt-get install python-numpy python-scipy '
