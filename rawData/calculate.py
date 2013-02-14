@@ -57,7 +57,8 @@ def calculate(filename):
 							timeDiff = time - timeStart
 							#set the string for print to file and screen
 							stuff = str(timeDiff) + ',' + str(alphaActivity) + ',' + str(timeDiff) + ',' + str(betaActivity) 
-							print(stuff)
+							printStuf = str(alphaActivity) + ' , ' + str(betaActivity) + ' , ' + str(timeDiff)
+							print(printStuf)
 							stuff += '\n'
 							w.write(stuff)
 
