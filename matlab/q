@@ -1,0 +1,382 @@
+%!PS-Adobe-2.0 EPSF-2.0
+%%BoundingBox: 757 -39 1166 408
+%%%%%%%%%%%%%%%%%%%
+%%Title: PLplot Graph
+%%Creator: PLplot Version 5.9.9
+%%CreationDate: Sun Mar  3 21:49:44 2013
+%%Pages: (atend)
+%%EndComments
+
+/PSSave save def
+/PSDict 200 dict def
+PSDict begin
+/@restore /restore load def
+/restore
+   {vmstatus pop
+    dup @VMused lt {pop @VMused} if
+    exch pop exch @restore /@VMused exch def
+   } def
+/@pri
+   {
+    ( ) print
+    (                                       ) cvs print
+   } def
+/@copies
+   {
+    /#copies exch def
+   } def
+/@start
+   {
+    vmstatus pop /@VMused exch def pop
+   } def
+/@end
+   {flush
+    end
+    PSSave restore
+   } def
+/bop
+   {
+    /SaveImage save def
+   } def
+/eop
+   {
+    showpage
+    SaveImage restore
+   } def
+/@line
+   {0 setlinecap
+    0 setlinejoin
+    1 setmiterlimit
+   } def
+/@hsize   {/hs exch def} def
+/@vsize   {/vs exch def} def
+/@hoffset {/ho exch def} def
+/@voffset {/vo exch def} def
+/lw 3 def
+/@SetPlot
+   {
+    ho vo translate
+    XScale YScale scale
+    lw setlinewidth
+   } def
+/XScale
+   {hs 2000 div} def
+/YScale
+   {vs 2000 div} def
+/M {moveto} def
+/D {lineto} def
+/A {0.5 0 360 arc} def
+/S {stroke} def
+/Z {stroke newpath} def
+/F {closepath gsave fill grestore stroke} def /N {newpath} def/C {setrgbcolor} def
+/G {setgray} def
+/W {setlinewidth} def
+/SF {selectfont} def
+/R {rotate} def
+/SW {stringwidth 2 index mul exch 2 index mul exch rmoveto pop} bind def
+/B {Z -3750 -3750 M -3750 5749 D 5749 5749 D 5749 -3750 D -3750 -3750 closepath} def
+/CL {newpath M D D D closepath clip} def
+end
+
+PSDict begin
+@start
+1 @copies
+@line
+400 @hsize
+400 @vsize
+1 @hoffset
+750 @voffset
+@SetPlot
+
+%%Page: 1 1
+bop
+ S
+1.0000 G S
+3 W S
+0.0000 G S
+0.0000 G S
+0.0000 G Z
+1766 280 M 1766 1824 D Z
+1766 297 M 1731 297 D Z
+1766 360 M 1749 360 D Z
+1766 424 M 1749 424 D Z
+1766 487 M 1749 487 D Z
+1766 551 M 1731 551 D Z
+1766 614 M 1749 614 D Z
+1766 678 M 1749 678 D Z
+1766 741 M 1749 741 D Z
+1766 805 M 1731 805 D Z
+1766 868 M 1749 868 D Z
+1766 931 M 1749 931 D Z
+1766 995 M 1749 995 D Z
+1766 1058 M 1731 1058 D Z
+1766 1122 M 1749 1122 D Z
+1766 1185 M 1749 1185 D Z
+1766 1249 M 1749 1249 D Z
+1766 1312 M 1731 1312 D Z
+1766 1376 M 1749 1376 D Z
+1766 1439 M 1749 1439 D Z
+1766 1502 M 1749 1502 D Z
+1766 1566 M 1731 1566 D Z
+1766 1629 M 1749 1629 D Z
+1766 1693 M 1749 1693 D Z
+1766 1756 M 1749 1756 D Z
+1766 1820 M 1731 1820 D Z
+1766 1824 M 233 1824 D Z
+1733 1798 M 1733 1824 D Z
+1657 1811 M 1657 1824 D Z
+1581 1811 M 1581 1824 D Z
+1505 1811 M 1505 1824 D Z
+1429 1811 M 1429 1824 D Z
+1354 1798 M 1354 1824 D Z
+1278 1811 M 1278 1824 D Z
+1202 1811 M 1202 1824 D Z
+1126 1811 M 1126 1824 D Z
+1051 1811 M 1051 1824 D Z
+975 1798 M 975 1824 D Z
+899 1811 M 899 1824 D Z
+823 1811 M 823 1824 D Z
+748 1811 M 748 1824 D Z
+672 1811 M 672 1824 D Z
+596 1798 M 596 1824 D Z
+520 1811 M 520 1824 D Z
+444 1811 M 444 1824 D Z
+369 1811 M 369 1824 D Z
+293 1811 M 293 1824 D Z
+233 1824 M 233 280 D Z
+268 1820 M 233 1820 D Z
+250 1756 M 233 1756 D Z
+250 1693 M 233 1693 D Z
+250 1629 M 233 1629 D Z
+268 1566 M 233 1566 D Z
+250 1502 M 233 1502 D Z
+250 1439 M 233 1439 D Z
+250 1376 M 233 1376 D Z
+268 1312 M 233 1312 D Z
+250 1249 M 233 1249 D Z
+250 1185 M 233 1185 D Z
+250 1122 M 233 1122 D Z
+268 1058 M 233 1058 D Z
+250 995 M 233 995 D Z
+250 931 M 233 931 D Z
+250 868 M 233 868 D Z
+268 805 M 233 805 D Z
+250 741 M 233 741 D Z
+250 678 M 233 678 D Z
+250 614 M 233 614 D Z
+268 551 M 233 551 D Z
+250 487 M 233 487 D Z
+250 424 M 233 424 D Z
+250 360 M 233 360 D Z
+268 297 M 233 297 D Z
+233 280 M 1766 280 D Z
+293 280 M 293 293 D Z
+369 280 M 369 293 D Z
+444 280 M 444 293 D Z
+520 280 M 520 293 D Z
+596 280 M 596 306 D Z
+672 280 M 672 293 D Z
+748 280 M 748 293 D Z
+823 280 M 823 293 D Z
+899 280 M 899 293 D Z
+975 280 M 975 306 D Z
+1051 280 M 1051 293 D Z
+1126 280 M 1126 293 D Z
+1202 280 M 1202 293 D Z
+1278 280 M 1278 293 D Z
+1354 280 M 1354 306 D Z
+1429 280 M 1429 293 D Z
+1505 280 M 1505 293 D Z
+1581 280 M 1581 293 D Z
+1657 280 M 1657 293 D Z
+1733 280 M 1733 306 D gsave 1999 0 1999 1999 0 1999 0 0 CL
+ 1867 297 M
+gsave 90.000 R
+/Helvetica 88.850 SF
+-0.500 (0) SW
+/Helvetica [88.850 0.000 0.000 88.850 0 0] SF
+(0) show
+grestore
+grestore
+ gsave 1999 0 1999 1999 0 1999 0 0 CL
+ 1867 551 M
+gsave 90.000 R
+/Helvetica 88.850 SF
+-0.500 (20) SW
+/Helvetica [88.850 0.000 0.000 88.850 0 0] SF
+(20) show
+grestore
+grestore
+ gsave 1999 0 1999 1999 0 1999 0 0 CL
+ 1867 805 M
+gsave 90.000 R
+/Helvetica 88.850 SF
+-0.500 (40) SW
+/Helvetica [88.850 0.000 0.000 88.850 0 0] SF
+(40) show
+grestore
+grestore
+ gsave 1999 0 1999 1999 0 1999 0 0 CL
+ 1867 1058 M
+gsave 90.000 R
+/Helvetica 88.850 SF
+-0.500 (60) SW
+/Helvetica [88.850 0.000 0.000 88.850 0 0] SF
+(60) show
+grestore
+grestore
+ gsave 1999 0 1999 1999 0 1999 0 0 CL
+ 1867 1312 M
+gsave 90.000 R
+/Helvetica 88.850 SF
+-0.500 (80) SW
+/Helvetica [88.850 0.000 0.000 88.850 0 0] SF
+(80) show
+grestore
+grestore
+ gsave 1999 0 1999 1999 0 1999 0 0 CL
+ 1867 1566 M
+gsave 90.000 R
+/Helvetica 88.850 SF
+-0.500 (100) SW
+/Helvetica [88.850 0.000 0.000 88.850 0 0] SF
+(100) show
+grestore
+grestore
+ gsave 1999 0 1999 1999 0 1999 0 0 CL
+ 1867 1820 M
+gsave 90.000 R
+/Helvetica 88.850 SF
+-0.500 (120) SW
+/Helvetica [88.850 0.000 0.000 88.850 0 0] SF
+(120) show
+grestore
+grestore
+ gsave 1999 0 1999 1999 0 1999 0 0 CL
+ 1763 262 M
+gsave 90.000 R
+/Helvetica 88.850 SF
+-1.000 (0.0) SW
+/Helvetica [88.850 0.000 0.000 88.850 0 0] SF
+(0.0) show
+grestore
+grestore
+ gsave 1999 0 1999 1999 0 1999 0 0 CL
+ 1385 262 M
+gsave 90.000 R
+/Helvetica 88.850 SF
+-1.000 (0.5) SW
+/Helvetica [88.850 0.000 0.000 88.850 0 0] SF
+(0.5) show
+grestore
+grestore
+ gsave 1999 0 1999 1999 0 1999 0 0 CL
+ 1006 262 M
+gsave 90.000 R
+/Helvetica 88.850 SF
+-1.000 (1.0) SW
+/Helvetica [88.850 0.000 0.000 88.850 0 0] SF
+(1.0) show
+grestore
+grestore
+ gsave 1999 0 1999 1999 0 1999 0 0 CL
+ 627 262 M
+gsave 90.000 R
+/Helvetica 88.850 SF
+-1.000 (1.5) SW
+/Helvetica [88.850 0.000 0.000 88.850 0 0] SF
+(1.5) show
+grestore
+grestore
+ gsave 1999 0 1999 1999 0 1999 0 0 CL
+ 171 249 M
+gsave 90.000 R
+/Helvetica 88.850 SF
+-1.000 (\(x104\)) SW
+/Helvetica [88.850 0.000 0.000 88.850 0 0] SF
+(\(x10) show
+/Helvetica [66.638 0.000 0.000 66.638 0 0] SF
+gsave 0.000 64.416 rmoveto
+(4) show
+grestore (4) stringwidth rmoveto
+/Helvetica [88.850 0.000 0.000 88.850 0 0] SF
+(\)) show
+grestore
+grestore
+ S
+0.0000 G Z
+1736 310 M 1733 322 D 1733 335 D 1444 348 D 1672 360 D 1337 373 D
+1415 386 D 1375 399 D 1626 411 D 1465 424 D 1399 437 D 1733 449 D
+1678 462 D 1666 475 D 1734 487 D 1733 500 D 1573 513 D 1627 525 D
+1733 538 D 1564 551 D 1733 563 D 1733 576 D 1548 589 D 1427 602 D
+1672 614 D 1733 627 D 1601 640 D 1508 652 D 1046 665 D 1731 678 D
+1733 690 D 1733 703 D 1733 716 D 1560 728 D 1658 741 D 1733 754 D
+1734 766 D 1642 779 D 1516 792 D 1733 805 D 1654 817 D Z
+1654 817 M 1732 830 D 1733 843 D 1733 855 D 1731 868 D 1646 881 D
+1626 893 D 1729 906 D 1732 919 D 1734 931 D 1703 944 D 1728 957 D
+1219 970 D 1501 982 D 1730 995 D 1733 1008 D 1721 1020 D 1733 1033 D
+1695 1046 D 1734 1058 D 1505 1071 D 1555 1084 D 1735 1096 D 1633 1109 D
+1588 1122 D 1582 1134 D 1647 1147 D 1702 1160 D 1605 1173 D 1733 1185 D
+1733 1198 D 1661 1211 D 1735 1223 D 1731 1236 D 1545 1249 D 1727 1261 D
+1620 1274 D 1733 1287 D 1468 1299 D 1579 1312 D 1732 1325 D Z
+1732 1325 M 1737 1337 D 1733 1350 D 1678 1363 D 1656 1376 D 1606 1388 D
+1456 1401 D 1734 1414 D 1591 1426 D 1613 1439 D 1534 1452 D 1456 1464 D
+1498 1477 D 1316 1490 D 1728 1502 D 1501 1515 D 1691 1528 D 1229 1540 D
+1582 1553 D 1729 1566 D 263 1579 D 1486 1591 D 852 1604 D 1328 1617 D
+1062 1629 D 1730 1642 D 1266 1655 D 1021 1667 D 518 1680 D 1728 1693 D
+1460 1705 D 1633 1718 D 1733 1731 D 1734 1744 D 1733 1756 D 1735 1769 D
+1734 1782 D 1733 1794 D S
+1.0000 G 1733 1794 M 
+ Z
+N 329 1605 M 329 1809 D 248 1809 D
+248 1605 D 329 1605 D F  S
+0.0000 G Z
+329 1605 M 329 1809 D 248 1809 D 248 1605 D 329 1605 D S
+0.0000 G 329 1605 M 
+ gsave 1766 280 1766 1824 233 1824 233 280 CL
+ 320 1809 M
+gsave 90.000 R
+/Helvetica 88.850 SF
+-1.000 (line 1) SW
+/Helvetica [88.850 0.000 0.000 88.850 0 0] SF
+(line 1) show
+grestore
+grestore
+ S
+0.0000 G Z
+329 1605 M 329 1809 D S
+0.0000 G 329 1809 M 
+ gsave 1999 0 1999 1999 0 1999 0 0 CL
+ 171 1052 M
+gsave 90.000 R
+/Helvetica 88.850 SF
+-0.500 (Title) SW
+/Helvetica [88.850 0.000 0.000 88.850 0 0] SF
+(Title) show
+grestore
+grestore
+ gsave 1999 0 1999 1999 0 1999 0 0 CL
+ 1946 1052 M
+gsave 90.000 R
+/Helvetica 88.850 SF
+-0.500 (X) SW
+/Helvetica [88.850 0.000 0.000 88.850 0 0] SF
+(X) show
+grestore
+grestore
+ gsave 1999 0 1999 1999 0 1999 0 0 CL
+ 999 136 M
+gsave 180.000 R
+/Helvetica 88.850 SF
+-0.500 (Y) SW
+/Helvetica [88.850 0.000 0.000 88.850 0 0] SF
+(Y) show
+grestore
+grestore
+ S
+eop
+
+%%Trailer
+%%Pages: 1
+@end
+%%EOF
