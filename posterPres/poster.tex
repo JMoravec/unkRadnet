@@ -1,0 +1,73 @@
+\documentclass[final,hyperref={pdfpagelabels=false}]{beamer}
+\mode<presentation>{\usetheme{I6pd2}}
+\usepackage[english]{babel}
+%\usepackage[latin1]{inputenc}
+\boldmath
+%\usepackage[orientation=landscape,size=custom,height=100,width=115]{beamerposter}
+\usepackage[orientation=landscape,size=custom,height=100,width=115,scale=2,debug]{beamerposter}
+
+\usepackage{array,booktabs,tabularx}
+\newcolumntype{Z}{>{\centering\arraybackslash}X}
+\newcommand{\pphantom}{\textcolor{ta3aluminium}}
+\let\underdot=\d
+\renewcommand{\d}[2]{\frac{d #1}{d #2}}
+
+%\listfiles
+
+\title{Data Analysis of an Expansion of the EPA’s RadNet Radiation Dosimetry Protocol}
+\author{Joshua Moravec, Adrian Sanabria-Diaz, Jeffery Brittenham, Kayla McMahon, Nathan Brady (Dr. Robert I. Price)} 
+\institute[University of Nebraska at Kearney]{Physics Department, University of Nebraska at Kearney, Kearney, Nebraska}
+\date[\today]{\today}
+
+\newlength{\columnheight}
+\setlength{\columnheight}{32in}
+
+\begin{document}
+\begin{frame}
+	\begin{columns}
+		\begin{column}{.49\textwidth}
+			\begin{beamercolorbox}[center,wd=\textwidth]{postercolumn}
+				\begin{minipage}[T]{.95\textwidth}
+					\parbox[t][\columnheight]{\textwidth}{
+						\begin{block}{RadNet}
+						The Environmental Protection Agency has a nationwide project called RadNet which ``monitors the nation's air, precipitation, drinking water, and pasteurized milk to track radiation in the environment.'' To monitor the air, stations are deployed around the country. At these stations air is sampled continuously at 60 cubic meters per hour. Detectors on the station monitory beta and gamma radioactivity on the filter. These results are reported the EPA. Every three or four days the filter is taken out and the beta and alpha radioactivity is measured after a period of at least five hours. The results and the filter is then sent to the EPA for further analysis.
+						\end{block}
+						\vfill
+						\begin{block}{Finding the Activity}
+						While the EPA project requires a reading after five hours of the filter, additional readings were instead taken at certain intervals. These intervals were chosen to correspond with the differential equation \[\d{A}{t} = -\lambda A\] where $A$ is the activity. The solution, $A = \left(A_{\text{stop}}\right)e^{-\lambda t}$ shows the alpha or beta activity (or $\d{N}{t}$ where $N$ is the number of particles) after the filter is taken from the monitoring station. We can use the differential equation \[\d{A}{t} = R - \lambda A\] to model the activity while the filter is still in the station. The $R$ is the rate of increase of activity due to the station pumping air. The solution, $A = \frac{R}{\lambda}\left(1-e^{-\lambda t}\right)$, allows us to solve for $R$: \[R = \frac{\lambda A_{\text{stop}}}{1-\exp(-\lambda t_{\text{stop}})}\]. As $t_{\text{stop}}$ is three or four days, it is sufficiently large enough to say \[R = \lambda A_{\text{stop}}\] Using this number and the rate of air being pumped, the amount of activity per cubic meter can be approximated for the given time interval.
+						\end{block}
+					}
+				\end{minipage}
+			\end{beamercolorbox}
+		\end{column}
+
+		\begin{column}{.49\textwidth}
+			\begin{beamercolorbox}[center,wd=\textwidth]{postercolumn}
+				\begin{minipage}[T]{.95\textwidth}
+					\parbox[t][\columnheight]{\textwidth}{
+						\begin{block}{Procedure}
+						After measuring, the data is inputed into a text file in a certain format. A program is then run to fit the data to a double exponential curve (i.e. $y = Ae^{\lambda_1 x} + Be^{\lambda_2 x}$)
+						\end{block}
+					}
+				\end{minipage}
+			\end{beamercolorbox}
+		\end{column}
+
+		\begin{column}{.49\textwidth}
+			\begin{beamercolorbox}[center,wd=\textwidth]{postercolumn}
+				\begin{minipage}[T]{.95\textwidth}
+					\parbox[t][\columnheight]{\textwidth}{
+						\begin{block}{Procedure}
+						After measuring, the data is inputed into a text file in a certain format. A program is then run to fit the data to a double exponential curve (i.e. $y = Ae^{\lambda_1 x} + Be^{\lambda_2 x}$)
+						\end{block}
+					}
+				\end{minipage}
+			\end{beamercolorbox}
+		\end{column}
+
+	\end{columns}
+	\vskip1ex
+\end{frame}
+\end{document}
+
+
