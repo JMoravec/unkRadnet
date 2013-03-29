@@ -1,5 +1,5 @@
 # Fdb version 3
-["latex"] 1364443283 "poster.tex" "poster.dvi" "poster" 
+["latex"] 1364485303 "poster.tex" "poster.dvi" "poster" 
   "/etc/texmf/tex/latex/config/color.cfg" 1254097189 802 7b8c8d72c24d795ed7720e4dfd29bff3 ""
   "/etc/texmf/tex/latex/config/graphics.cfg" 1255993321 3328 2584cfe577535f0a08f3a9717b5152ab ""
   "/usr/share/texmf-texlive/tex/generic/babel/babel.def" 1215520807 29228 699ca4762be67572f34cbe7344a39df8 ""
@@ -154,10 +154,10 @@
   "/var/lib/texmf/tex/generic/babel/babel.sty" 1360534770 9196 7941d7b30577f4c2f84c82751b796f66 ""
   "beamerposter.sty" 1290086914 12774 7a5ac28f0267e419b8d79d049cfca652 ""
   "beamerthemeI6pd2.sty" 1364441496 5283 c3a1ec2d36dbe0297e34dd37ebbf231f ""
-  "poster.aux" 1364443288 1097 b83b14804644c9a76bf0ce24a91d6230 ""
-  "poster.nav" 1364443288 346 491da15bfa9767642f9448ace93f9e1e ""
-  "poster.out" 1364443284 0 d41d8cd98f00b204e9800998ecf8427e ""
-  "poster.tex" 1364443280 4179 0015eca04add6080148ddc80ceb36692 ""
+  "poster.aux" 1364485304 1154 6392ffc11fff77aef70e60e7340dafc0 ""
+  "poster.nav" 1364485304 346 77ccaef7ecfda9db7d81ae847b7e9224 ""
+  "poster.out" 1364485304 0 d41d8cd98f00b204e9800998ecf8427e ""
+  "poster.tex" 1364485298 4780 34a37f185d2e4947572688f2fcedb7ee ""
   "tangocolors.sty" 1364432910 2141 61df698f50c023c26043862485d39f0e ""
   "unk_sig15_pos_294.eps" 1269887304 660383 57760af7ecbcbc92e6f51383c856881b ""
   (generated)

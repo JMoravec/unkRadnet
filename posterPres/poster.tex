@@ -1,4 +1,4 @@
-\documentclass[final,hyperref={pdfpagelabels=false}]{beamer}
+\documentclass[final,11pt]{beamer}
 \mode<presentation>{\usetheme{I6pd2}}
 \usepackage[english]{babel}
 %\usepackage[latin1]{inputenc}
@@ -12,7 +12,7 @@
 \let\underdot=\d
 \renewcommand{\d}[2]{\frac{d #1}{d #2}}
 
-%\listfiles
+\listfiles
 
 \title{Data Analysis of an Expansion of the EPA’s RadNet Radiation Dosimetry Protocol}
 \author{Joshua Moravec, Adrian Sanabria-Diaz, Jeffery Brittenham, Kayla McMahon, Nathan Brady (Dr. Robert I. Price)} 
@@ -25,40 +25,40 @@
 \begin{document}
 \begin{frame}
 	\begin{columns}
-		\begin{column}{.49\textwidth}
+		\begin{column}{.30\textwidth}
 			\begin{beamercolorbox}[center,wd=\textwidth]{postercolumn}
 				\begin{minipage}[T]{.95\textwidth}
 					\parbox[t][\columnheight]{\textwidth}{
 						\begin{block}{RadNet}
-						The Environmental Protection Agency has a nationwide project called RadNet which ``monitors the nation's air, precipitation, drinking water, and pasteurized milk to track radiation in the environment.'' To monitor the air, stations are deployed around the country. At these stations air is sampled continuously at 60 cubic meters per hour. Detectors on the station monitory beta and gamma radioactivity on the filter. These results are reported the EPA. Every three or four days the filter is taken out and the beta and alpha radioactivity is measured after a period of at least five hours. The results and the filter is then sent to the EPA for further analysis.
+					\small	The Environmental Protection Agency has a nationwide project called RadNet which ``monitors the nation's air, precipitation, drinking water, and pasteurized milk to track radiation in the environment.'' To monitor the air, stations are deployed around the country. At these stations air is sampled continuously at 60 cubic meters per hour. Detectors on the station monitory beta and gamma radioactivity on the filter. These results are reported the EPA. Every three or four days the filter is taken out and the beta and alpha radioactivity is measured after a period of at least five hours. The results and the filter is then sent to the EPA for further analysis.
 						\end{block}
 						\vfill
+					}
+				\end{minipage}
+			\end{beamercolorbox}
+		\end{column}
+
+		\begin{column}{.39\textwidth}
+			\begin{beamercolorbox}[center,wd=\textwidth]{postercolumn}
+				\begin{minipage}[T]{.95\textwidth}
+					\parbox[t][\columnheight]{\textwidth}{
 						\begin{block}{Finding the Activity}
-						While the EPA project requires a reading after five hours of the filter, additional readings were instead taken at certain intervals. These intervals were chosen to correspond with the differential equation \[\d{A}{t} = -\lambda A\] where $A$ is the activity. The solution, $A = \left(A_{\text{stop}}\right)e^{-\lambda t}$ shows the alpha or beta activity (or $\d{N}{t}$ where $N$ is the number of particles) after the filter is taken from the monitoring station. We can use the differential equation \[\d{A}{t} = R - \lambda A\] to model the activity while the filter is still in the station. The $R$ is the rate of increase of activity due to the station pumping air. The solution, $A = \frac{R}{\lambda}\left(1-e^{-\lambda t}\right)$, allows us to solve for $R$: \[R = \frac{\lambda A_{\text{stop}}}{1-\exp(-\lambda t_{\text{stop}})}\]. As $t_{\text{stop}}$ is three or four days, it is sufficiently large enough to say \[R = \lambda A_{\text{stop}}\] Using this number and the rate of air being pumped, the amount of activity per cubic meter can be approximated for the given time interval.
+					\small	While the EPA project requires a reading after five hours of the filter, additional readings were instead taken at certain intervals. These intervals were chosen to correspond with the differential equation \[\d{A}{t} = -\lambda A\] where $A$ is the activity. The solution, $A = \left(A_{\text{stop}}\right)e^{-\lambda t}$ shows the alpha or beta activity (or $\d{N}{t}$ where $N$ is the number of particles) after the filter is taken from the monitoring station. We can use the differential equation \[\d{A}{t} = \mathcal{R} - \lambda A\] to model the activity while the filter is still in the station. The $\mathcal{R}$ is the rate of increase of activity due to the station pumping air. The solution, $A = \frac{\mathcal{R}}{\lambda}\left(1-e^{-\lambda t}\right)$, allows us to solve for $\mathcal{R}$: \[\mathcal{R} = \frac{\lambda A_{\text{stop}}}{1-\exp(-\lambda t_{\text{stop}})}\]. As $t_{\text{stop}}$ is three or four days, it is sufficiently large enough to say \[\mathcal{R} = \lambda A_{\text{stop}}\] Using this number and the rate of air being pumped, the amount of activity per cubic meter can be approximated for the given time interval.
+						\end{block}
+						\begin{block}{Procedure}
+						\small After measuring, the data is inputed into a text file. A program is then run to fit the data to a double exponential curve (i.e. $y = Ae^{\lambda_1 x} + Be^{\lambda_2 x}$) Using these values, $\mathcal{R}$ can be found which is then used to give a qualitative amount of activity one breathes.
 						\end{block}
 					}
 				\end{minipage}
 			\end{beamercolorbox}
 		\end{column}
 
-		\begin{column}{.49\textwidth}
+		\begin{column}{.30\textwidth}
 			\begin{beamercolorbox}[center,wd=\textwidth]{postercolumn}
 				\begin{minipage}[T]{.95\textwidth}
 					\parbox[t][\columnheight]{\textwidth}{
-						\begin{block}{Procedure}
-						After measuring, the data is inputed into a text file in a certain format. A program is then run to fit the data to a double exponential curve (i.e. $y = Ae^{\lambda_1 x} + Be^{\lambda_2 x}$)
-						\end{block}
-					}
-				\end{minipage}
-			\end{beamercolorbox}
-		\end{column}
-
-		\begin{column}{.49\textwidth}
-			\begin{beamercolorbox}[center,wd=\textwidth]{postercolumn}
-				\begin{minipage}[T]{.95\textwidth}
-					\parbox[t][\columnheight]{\textwidth}{
-						\begin{block}{Procedure}
-						After measuring, the data is inputed into a text file in a certain format. A program is then run to fit the data to a double exponential curve (i.e. $y = Ae^{\lambda_1 x} + Be^{\lambda_2 x}$)
+						\begin{block}{Conclusion}
+						\small Although the activity per cubic meter can be found, this data does not allow for analysis of energy. This is due to the fact that the particular isotopes cannot be known using this procedure. However, The analysis can be used to see trends over time in activity amounts of a short and half life isotopes that may correspond with meteorological or other external events. This is different from the EPA's continuous analysis in that beta as well as alpha radiation is measured. This data, coupled with the assay performed by EPA of the filter may provide a more complete understanding of radioactive activity distribution in America.
 						\end{block}
 					}
 				\end{minipage}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2013.2.10)  27 MAR 2013 23:01
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2013.2.10)  28 MAR 2013 10:41
 entering extended mode
  %&-line parsing enabled.
 **poster.tex
@@ -356,7 +356,6 @@ t (HO)
 Package hyperref Info: Option `final' set `true' on input line 2864.
 Package hyperref Info: Option `bookmarks' set `true' on input line 2864.
 Package hyperref Info: Option `bookmarksopen' set `true' on input line 2864.
-Package hyperref Info: Option `pdfpagelabels' set `false' on input line 2864.
 Package hyperref Info: Option `implicit' set `false' on input line 2864.
 Package hyperref Info: Hyper figures OFF on input line 2975.
 Package hyperref Info: Link nesting OFF on input line 2980.
@@ -412,6 +411,8 @@ Package hyperref Info: PDF/A mode OFF on input line 4407.
 (/usr/share/texmf-texlive/tex/generic/oberdiek/atbegshi.sty
 Package: atbegshi 2008/07/31 v1.9 At begin shipout hook (HO)
 )
+\Hy@abspage=\count121
+
 Hyperref stopped early
 )
 *hyperref using default driver hdvips*
@@ -424,7 +425,7 @@ File: pdfmark.def 2009/10/09 v6.79a Hyperref definitions for pdfmark specials
 \pdf@box=\box40
 \pdf@toks=\toks25
 \pdf@defaulttoks=\toks26
-\Fld@listcount=\count121
+\Fld@listcount=\count122
 ))
 (/usr/share/texmf/tex/latex/beamer/base/beamerbaserequires.sty
 Package: beamerbaserequires 2010/05/01  (rcs-revision efa082c6111d)
@@ -461,36 +462,36 @@ Package: beamerbasetwoscreens 2010/05/01  (rcs-revision efa082c6111d)
 )
 (/usr/share/texmf/tex/latex/beamer/base/beamerbaseoverlay.sty
 Package: beamerbaseoverlay 2010/05/07  (rcs-revision 5584dad462a9)
-\beamer@argscount=\count122
+\beamer@argscount=\count123
 \beamer@lastskipcover=\skip44
-\beamer@trivlistdepth=\count123
+\beamer@trivlistdepth=\count124
 )
 (/usr/share/texmf/tex/latex/beamer/base/beamerbasetitle.sty
 Package: beamerbasetitle 2010/06/12  (rcs-revision 717e481ca47a)
 )
 (/usr/share/texmf/tex/latex/beamer/base/beamerbasesection.sty
 Package: beamerbasesection 2010/06/17  (rcs-revision e0d9401bb743)
-\c@lecture=\count124
-\c@part=\count125
-\c@section=\count126
-\c@subsection=\count127
-\c@subsubsection=\count128
+\c@lecture=\count125
+\c@part=\count126
+\c@section=\count127
+\c@subsection=\count128
+\c@subsubsection=\count129
 )
 (/usr/share/texmf/tex/latex/beamer/base/beamerbaseframe.sty
 Package: beamerbaseframe 2010/06/06  (rcs-revision bff0a9294b45)
 \beamer@framebox=\box41
 \beamer@frametitlebox=\box42
 \beamer@zoombox=\box43
-\beamer@zoomcount=\count129
-\beamer@zoomframecount=\count130
+\beamer@zoomcount=\count130
+\beamer@zoomframecount=\count131
 \beamer@frametextheight=\dimen160
-\c@subsectionslide=\count131
+\c@subsectionslide=\count132
 \beamer@frametopskip=\skip45
 \beamer@framebottomskip=\skip46
 \beamer@frametopskipautobreak=\skip47
 \beamer@framebottomskipautobreak=\skip48
 \beamer@envbody=\toks28
-\c@framenumber=\count132
+\c@framenumber=\count133
 )
 (/usr/share/texmf/tex/latex/beamer/base/beamerbaseverbatim.sty
 Package: beamerbaseverbatim 2010/05/01  (rcs-revision efa082c6111d)
@@ -499,7 +500,7 @@ Package: beamerbaseverbatim 2010/05/01  (rcs-revision efa082c6111d)
 (/usr/share/texmf/tex/latex/beamer/base/beamerbaseframesize.sty
 Package: beamerbaseframesize 2010/06/27  (rcs-revision 6baa2d92e6f1)
 \beamer@splitbox=\box44
-\beamer@autobreakcount=\count133
+\beamer@autobreakcount=\count134
 \beamer@autobreaklastheight=\dimen161
 \beamer@frametitletoks=\toks29
 \beamer@framesubtitletoks=\toks30
@@ -546,8 +547,8 @@ Package: beamerbaselocalstructure 2010/06/01  (rcs-revision 81f9e33f7cc2)
 Package: enumerate 1999/03/05 v3.00 enumerate extensions (DPC)
 \@enLab=\toks32
 )
-\c@figure=\count134
-\c@table=\count135
+\c@figure=\count135
+\c@table=\count136
 \abovecaptionskip=\skip49
 \belowcaptionskip=\skip50
 )
@@ -577,13 +578,13 @@ Package: amsbsy 1999/11/29 v1.2d
 (/usr/share/texmf-texlive/tex/latex/amsmath/amsopn.sty
 Package: amsopn 1999/12/14 v2.01 operator names
 )
-\inf@bad=\count136
+\inf@bad=\count137
 LaTeX Info: Redefining \frac on input line 211.
-\uproot@=\count137
-\leftroot@=\count138
+\uproot@=\count138
+\leftroot@=\count139
 LaTeX Info: Redefining \overline on input line 307.
-\classnum@=\count139
-\DOTSCASE@=\count140
+\classnum@=\count140
+\DOTSCASE@=\count141
 LaTeX Info: Redefining \ldots on input line 379.
 LaTeX Info: Redefining \dots on input line 382.
 LaTeX Info: Redefining \cdots on input line 467.
@@ -592,15 +593,15 @@ LaTeX Info: Redefining \cdots on input line 467.
 \big@size=\dimen169
 LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
-\macc@depth=\count141
-\c@MaxMatrixCols=\count142
+\macc@depth=\count142
+\c@MaxMatrixCols=\count143
 \dotsspace@=\muskip11
-\c@parentequation=\count143
-\dspbrk@lvl=\count144
+\c@parentequation=\count144
+\dspbrk@lvl=\count145
 \tag@help=\toks34
-\row@=\count145
-\column@=\count146
-\maxfields@=\count147
+\row@=\count146
+\column@=\count147
+\maxfields@=\count148
 \andhelp@=\toks35
 \eqnshift@=\dimen170
 \alignsep@=\dimen171
@@ -627,7 +628,7 @@ Package: amsthm 2004/08/06 v2.20
 \thm@headsep=\skip56
 \dth@everypar=\toks43
 )
-\c@theorem=\count148
+\c@theorem=\count149
 )
 (/usr/share/texmf/tex/latex/beamer/base/beamerbasethemes.sty
 Package: beamerbasethemes 2010/05/01  (rcs-revision efa082c6111d)
@@ -663,7 +664,7 @@ Language: english 2005/03/30 v3.3o English support from the babel system
 (/usr/share/texmf-texlive/tex/generic/babel/babel.def
 File: babel.def 2008/07/06 v3.8l Babel common definitions
 LaTeX Info: Redefining \textlatin on input line 82.
-\babel@savecnt=\count149
+\babel@savecnt=\count150
 \U@D=\dimen178
 )
 \l@canadian = a dialect from \language\l@american 
@@ -678,7 +679,7 @@ Package: xkeyval 2008/08/13 v2.6a package option processing (HA)
 (/usr/share/texmf-texlive/tex/generic/xkeyval/xkeyval.tex
 \XKV@toks=\toks44
 \XKV@tempa@toks=\toks45
-\XKV@depth=\count150
+\XKV@depth=\count151
 File: xkeyval.tex 2008/08/13 v2.6a key=value parser (HA)
 ))
 (/usr/share/texmf-texlive/tex/latex/type1cm/type1cm.sty
@@ -691,19 +692,19 @@ Package: fp 1995/04/02
 `Fixed Point Package', Version 0.8, April 2, 1995 (C) Michael Mehlich
 (/usr/share/texmf-texlive/tex/latex/fp/defpattern.sty
 Package: defpattern 1994/10/12
-\actioncount=\count151
+\actioncount=\count152
 )
 (/usr/share/texmf-texlive/tex/latex/fp/fp-basic.sty
 Package: fp-basic 1996/05/13
-\FP@xs=\count152
-\FP@xia=\count153
-\FP@xib=\count154
-\FP@xfa=\count155
-\FP@xfb=\count156
-\FP@rega=\count157
-\FP@regb=\count158
-\FP@regs=\count159
-\FP@times=\count160
+\FP@xs=\count153
+\FP@xia=\count154
+\FP@xib=\count155
+\FP@xfa=\count156
+\FP@xfb=\count157
+\FP@rega=\count158
+\FP@regb=\count159
+\FP@regs=\count160
+\FP@times=\count161
 )
 (/usr/share/texmf-texlive/tex/latex/fp/fp-addons.sty
 Package: fp-addons 1995/03/15
@@ -722,7 +723,7 @@ Package: fp-pas 1994/08/29
 )
 (/usr/share/texmf-texlive/tex/latex/fp/fp-random.sty
 Package: fp-random 1995/02/23
-\FPseed=\count161
+\FPseed=\count162
 )
 (/usr/share/texmf-texlive/tex/latex/fp/fp-eqn.sty
 Package: fp-eqn 1995/04/03
@@ -1300,12 +1301,12 @@ Package: booktabs 2005/04/14 v1.61803 publication quality tables
 \cmidrulesep=\dimen188
 \cmidrulekern=\dimen189
 \defaultaddspace=\dimen190
-\@cmidla=\count162
-\@cmidlb=\count163
+\@cmidla=\count163
+\@cmidlb=\count164
 \@aboverulesep=\dimen191
 \@belowrulesep=\dimen192
-\@thisruleclass=\count164
-\@lastruleclass=\count165
+\@thisruleclass=\count165
+\@lastruleclass=\count166
 \@thisrulewidth=\dimen193
 )
 (/usr/share/texmf-texlive/tex/latex/tools/tabularx.sty
@@ -1315,7 +1316,7 @@ Package: tabularx 1999/01/07 v2.07 `tabularx' package (DPC)
 \TX@old@col=\dimen196
 \TX@target=\dimen197
 \TX@delta=\dimen198
-\TX@cols=\count166
+\TX@cols=\count167
 \TX@ftn=\toks47
 )
 \columnheight=\skip59
@@ -1387,7 +1388,7 @@ Package: nameref 2007/05/29 v2.31 Cross-referencing by name of section
 (/usr/share/texmf-texlive/tex/latex/oberdiek/refcount.sty
 Package: refcount 2008/08/11 v3.1 Data extraction from references (HO)
 )
-\c@section@level=\count167
+\c@section@level=\count168
 )
 LaTeX Info: Redefining \ref on input line 25.
 LaTeX Info: Redefining \pageref on input line 25.
@@ -1470,40 +1471,20 @@ Missing character: There is no ™ in font cmssbx10!
 File: unk_sig15_pos_294.eps Graphic file (type eps)
 
 <unk_sig15_pos_294.eps>
-! Undefined control sequence.
-\beamer@frameslide ...duration=}\thispdfpagelabel 
-                                                  {\insertframenumber } \xde...
-l.70 \end{frame}
-                
-? 
 LaTeX Font Info:    Calculating math sizes for size <49.76> on input line 70.
+
 
 LaTeX Font Warning: Font shape `OT1/cmss/bx/it' undefined
 (Font)              using `OT1/cmss/bx/n' instead on input line 70.
 
-
-Overfull \hbox (1454.27336pt too wide) detected at line 70
-[][][][][][][] $[]$[][][][][][][][][][][][][][][][][][][][][][][][] $[]$[][][][
-][][][][][][][][][][][][][][][][][][][][] $[]$[][][][][][][][][][][][][][][][][
-][] 
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
+LaTeX Font Info:    Calculating math sizes for size <41.48> on input line 70.
 Missing character: There is no â in font cmssbx10!
 Missing character: There is no € in font cmssbx10!
 Missing character: There is no ™ in font cmssbx10!
 File: unk_sig15_pos_294.eps Graphic file (type eps)
-
 <unk_sig15_pos_294.eps> [1
 
 ]
-Missing character: There is no â in font cmssbx10!
-Missing character: There is no € in font cmssbx10!
-Missing character: There is no ™ in font cmssbx10!
-File: unk_sig15_pos_294.eps Graphic file (type eps)
- <unk_sig15_pos_294.eps> [2]
 \tf@nav=\write6
 \openout6 = `poster.nav'.
 
@@ -1515,16 +1496,148 @@ File: unk_sig15_pos_294.eps Graphic file (type eps)
 
  (./poster.aux)
 
+ *File List*
+  beamer.cls    2010/06/21 development version 3.10 A class for typesetting pre
+sentations (rcs-revision a6b1a8434d30)
+beamerbasercs.sty    2010/06/12 (rcs-revision c3821710bb40)
+beamerbasemodes.sty    2010/05/01 (rcs-revision efa082c6111d)
+beamerbasedecode.sty    2010/05/01 (rcs-revision efa082c6111d)
+beamerbaseoptions.sty    2010/04/27 (rcs-revision 982469101dd6)
+  keyval.sty    1999/03/16 v1.13 key=value parser (DPC)
+geometry.sty    2008/12/21 v4.2 Page Geometry
+   ifpdf.sty    2009/04/10 v2.0 Provides the ifpdf switch (HO)
+  ifvtex.sty    2008/11/04 v1.4 Switches for detecting VTeX and its modes (HO)
+geometry.cfg
+  size11.clo    2007/10/19 v1.4h Standard LaTeX file (size option)
+ pgfcore.sty    2010/04/11 v2.10 (rcs-revision 1.7)
+graphicx.sty    1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+graphics.sty    2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+    trig.sty    1999/03/16 v1.09 sin cos tan (DPC)
+graphics.cfg    2009/08/28 v1.8 graphics configuration of TeX Live
+   dvips.def    1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+  pgfsys.sty    2010/06/30 v2.10 (rcs-revision 1.37)
+  pgfrcs.sty    2010/10/25 v2.10 (rcs-revision 1.24)
+everyshi.sty    2001/05/15 v3.00 EveryShipout Package (MS)
+  pgfrcs.code.tex
+  pgfsys.code.tex
+pgfsyssoftpath.code.tex    2008/07/18  (rcs-revision 1.7)
+pgfsysprotocol.code.tex    2006/10/16  (rcs-revision 1.4)
+  xcolor.sty    2007/01/21 v2.11 LaTeX color extensions (UK)
+   color.cfg    2007/01/18 v1.5 color configuration of teTeX/TeXLive
+ pgfcore.code.tex
+ xxcolor.sty    2003/10/24 ver 0.1
+hyperref.sty    2009/10/09 v6.79a Hypertext links for LaTeX
+ ifxetex.sty    2009/01/23 v0.5 Provides ifxetex conditional
+ hycolor.sty    2009/10/02 v1.5 Code for color options of hyperref/bookmark (HO
+)
+xcolor-patch.sty    2009/10/02 xcolor patch
+  pd1enc.def    2009/10/09 v6.79a Hyperref: PDFDocEncoding definition (HO)
+etexcmds.sty    2007/12/12 v1.2 Prefix for e-TeX command names (HO)
+infwarerr.sty    2007/09/09 v1.2 Providing info/warning/message (HO)
+hyperref.cfg    2002/06/06 v1.2 hyperref configuration of TeXLive
+kvoptions.sty    2009/08/13 v3.4 Keyval support for LaTeX options (HO)
+kvsetkeys.sty    2009/07/30 v1.5 Key value parser with default handler support 
+(HO)
+     url.sty    2006/04/12  ver 3.3  Verb mode for urls, etc.
+  bitset.sty    2007/09/28 v1.0 Data type bit set (HO)
+ intcalc.sty    2007/09/27 v1.1 Expandable integer calculations (HO)
+bigintcalc.sty    2007/11/11 v1.1 Expandable big integer calculations (HO)
+pdftexcmds.sty    2009/09/23 v0.6 LuaTeX support for pdfTeX utility functions (
+HO)
+ifluatex.sty    2009/04/17 v1.2 Provides the ifluatex switch (HO)
+ ltxcmds.sty    2009/08/05 v1.0 Some LaTeX kernel commands for general use (HO)
+
+atbegshi.sty    2008/07/31 v1.9 At begin shipout hook (HO)
+  hdvips.def    2009/10/09 v6.79a Hyperref driver for dvips
+ pdfmark.def    2009/10/09 v6.79a Hyperref definitions for pdfmark specials
+beamerbaserequires.sty    2010/05/01  (rcs-revision efa082c6111d)
+beamerbasecompatibility.sty    2010/07/12  (rcs-revision 6648c3177e4e)
+beamerbasefont.sty    2010/05/10  (rcs-revision cd36e8a33c6b)
+ amssymb.sty    2009/06/22 v3.00
+amsfonts.sty    2009/06/22 v3.00 Basic AMSFonts support
+beamerbasetranslator.sty    2010/06/11  (rcs-revision 85fd1cc7fc42)
+translator.sty    2010/06/12 ver 1.10
+translator-language-mappings.tex
+beamerbasemisc.sty    2010/06/06  (rcs-revision bff0a9294b45)
+beamerbasetwoscreens.sty    2010/05/01  (rcs-revision efa082c6111d)
+beamerbaseoverlay.sty    2010/05/07  (rcs-revision 5584dad462a9)
+beamerbasetitle.sty    2010/06/12  (rcs-revision 717e481ca47a)
+beamerbasesection.sty    2010/06/17  (rcs-revision e0d9401bb743)
+beamerbaseframe.sty    2010/06/06  (rcs-revision bff0a9294b45)
+beamerbaseverbatim.sty    2010/05/01  (rcs-revision efa082c6111d)
+beamerbaseframesize.sty    2010/06/27  (rcs-revision 6baa2d92e6f1)
+beamerbaseframecomponents.sty    2010/07/12  (rcs-revision 09e82992d9b1)
+beamerbasecolor.sty    2010/06/06  (rcs-revision d1a9b48be06d)
+beamerbasenotes.sty    2010/05/01  (rcs-revision efa082c6111d)
+beamerbasetoc.sty    2010/06/11  (rcs-revision 242ecaa6783b)
+beamerbasetemplates.sty    2010/05/01  (rcs-revision efa082c6111d)
+beamerbaseauxtemplates.sty    2010/05/01  (rcs-revision efa082c6111d)
+beamerbaseboxes.sty    2010/05/01  (rcs-revision efa082c6111d)
+beamerbaselocalstructure.sty    2010/06/01  (rcs-revision 81f9e33f7cc2)
+enumerate.sty    1999/03/05 v3.00 enumerate extensions (DPC)
+beamerbasenavigation.sty    2010/05/01  (rcs-revision efa082c6111d)
+beamerbasetheorems.sty    2010/06/06  (rcs-revision 7e7cc5e53e9d)
+ amsmath.sty    2000/07/18 v2.13 AMS math features
+ amstext.sty    2000/06/29 v2.01
+  amsgen.sty    1999/11/30 v2.0
+  amsbsy.sty    1999/11/29 v1.2d
+  amsopn.sty    1999/12/14 v2.01 operator names
+  amsthm.sty    2004/08/06 v2.20
+beamerbasethemes.sty    2010/05/01  (rcs-revision efa082c6111d)
+beamerthemedefault.sty    2010/06/17  (rcs-revision d02a7cf4d8ae)
+beamerfontthemedefault.sty    2010/06/17  (rcs-revision d02a7cf4d8ae)
+beamercolorthemedefault.sty    2010/06/17  (rcs-revision d02a7cf4d8ae)
+beamerinnerthemedefault.sty    2010/06/17  (rcs-revision d02a7cf4d8ae)
+beamerouterthemedefault.sty    2010/06/17  (rcs-revision d02a7cf4d8ae)
+beamerthemeI6pd2.sty    
+tangocolors.sty    
+   babel.sty    2008/07/06 v3.8l The Babel package
+ english.ldf    2005/03/30 v3.3o English support from the babel system
+beamerposter.sty    2010/11/18 v.1.12 latex-beamer poster extension
+ xkeyval.sty    2008/08/13 v2.6a package option processing (HA)
+ xkeyval.tex    2008/08/13 v2.6a key=value parser (HA)
+ type1cm.sty    2002/09/05 v0.04 BlueSky/Y&Y Type1 CM font definitions (DPC, pa
+tched RF)
+      fp.sty    1995/04/02
+defpattern.sty    1994/10/12
+fp-basic.sty    1996/05/13
+fp-addons.sty    1995/03/15
+ fp-snap.sty    1995/04/05
+  fp-exp.sty    1995/04/03
+fp-trigo.sty    1995/04/14
+  fp-pas.sty    1994/08/29
+fp-random.sty    1995/02/23
+  fp-eqn.sty    1995/04/03
+  fp-upn.sty    1996/10/21
+ fp-eval.sty    1995/04/03
+   array.sty    2008/09/09 v2.4c Tabular extension package (FMi)
+booktabs.sty    2005/04/14 v1.61803 publication quality tables
+tabularx.sty    1999/01/07 v2.07 `tabularx' package (DPC)
+ nameref.sty    2007/05/29 v2.31 Cross-referencing by name of section
+refcount.sty    2008/08/11 v3.1 Data extraction from references (HO)
+  poster.out
+  poster.out
+translator-basic-dictionary-English.dict    
+translator-bibliography-dictionary-English.dict    
+translator-environment-dictionary-English.dict    
+translator-months-dictionary-English.dict    
+translator-numbers-dictionary-English.dict    
+translator-theorem-dictionary-English.dict    
+unk_sig15_pos_294.eps    Graphic file (type eps)
+unk_sig15_pos_294.eps    Graphic file (type eps)
+ ***********
+
+
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 15529 strings out of 493849
- 283538 string characters out of 1152846
- 458840 words of memory out of 3000000
- 18372 multiletter control sequences out of 15000+50000
- 11449 words of font info for 43 fonts, out of 3000000 for 9000
+ 15585 strings out of 493849
+ 284410 string characters out of 1152846
+ 477554 words of memory out of 3000000
+ 18428 multiletter control sequences out of 15000+50000
+ 16372 words of font info for 62 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
- 49i,21n,66p,1113b,1234s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 49i,20n,66p,1179b,1234s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on poster.dvi (2 pages, 88160 bytes).
+Output written on poster.dvi (1 page, 68764 bytes).
