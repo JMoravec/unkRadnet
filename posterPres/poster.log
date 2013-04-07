@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2013.2.10)  28 MAR 2013 10:41
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=latex 2013.2.10)  2 APR 2013 13:40
 entering extended mode
  %&-line parsing enabled.
 **poster.tex
@@ -1319,24 +1319,80 @@ Package: tabularx 1999/01/07 v2.07 `tabularx' package (DPC)
 \TX@cols=\count167
 \TX@ftn=\toks47
 )
-\columnheight=\skip59
+(/usr/share/texmf-texlive/tex/latex/wrapfig/wrapfig.sty
+\wrapoverhang=\dimen199
+\WF@size=\dimen200
+\c@WF@wrappedlines=\count168
+\WF@box=\box54
+\WF@everypar=\toks48
+Package: wrapfig 2003/01/31  v 3.6
+)
+(/usr/share/texmf-texlive/tex/latex/floatrow/floatrow.sty
+Package: floatrow 2008/08/02 v0.3b floatrow: float package extension
+
+(/usr/share/texmf-texlive/tex/latex/caption/caption3.sty
+Package: caption3 2009/10/09 v3.1k caption3 kernel (AR)
+\captionmargin=\dimen201
+\captionmargin@=\dimen202
+\captionwidth=\dimen203
+\caption@indent=\dimen204
+\caption@parindent=\dimen205
+\caption@hangindent=\dimen206
+)
+\c@float@type=\count169
+\float@exts=\toks49
+\float@box=\box55
+\@floatcapt=\box56
+Package floatrow Info: Modified float package code loaded on input line 455.
+Package floatrow Info: Modified rotfloat package code loaded on input line 473.
+
+\FR@everyfloat=\toks50
+\flrow@foot=\insert233
+\FB@wd=\dimen207
+\FBo@wd=\dimen208
+\FBc@wd=\dimen209
+\FBo@ht=\skip59
+\FBc@ht=\skip60
+\FBf@ht=\skip61
+\FBo@max=\skip62
+\FBc@max=\skip63
+\FBf@max=\skip64
+\c@FBl@b=\count170
+\floatbox@depth=\count171
+\c@FRobj=\count172
+\c@FRsobj=\count173
+\Xhsize=\skip65
+\sXhsize=\skip66
+\Zhsize=\skip67
+\sZhsize=\skip68
+\flrow@rowbox=\box57
+\FR@Zunitlength=\dimen210
+\c@FBcnt=\count174
+\FPOScnt=\count175
+\LTleft=\skip69
+\LTright=\skip70
+\LTleft=\skip71
+\LTright=\skip72
+\flrow@types=\toks51
+)
+\columnheight=\skip73
  (./poster.aux)
 \openout1 = `poster.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
 
 *geometry auto-detecting driver*
 *geometry detected driver: dvips*
@@ -1380,7 +1436,7 @@ driver: dvips
 (1in=72.27pt, 1cm=28.45pt)
 -----------------------
 ABD: EveryShipout initializing macros
-Package hyperref Info: Link coloring OFF on input line 25.
+Package hyperref Info: Link coloring OFF on input line 27.
 
 (/usr/share/texmf-texlive/tex/latex/hyperref/nameref.sty
 Package: nameref 2007/05/29 v2.31 Cross-referencing by name of section
@@ -1388,58 +1444,58 @@ Package: nameref 2007/05/29 v2.31 Cross-referencing by name of section
 (/usr/share/texmf-texlive/tex/latex/oberdiek/refcount.sty
 Package: refcount 2008/08/11 v3.1 Data extraction from references (HO)
 )
-\c@section@level=\count168
+\c@section@level=\count176
 )
-LaTeX Info: Redefining \ref on input line 25.
-LaTeX Info: Redefining \pageref on input line 25.
+LaTeX Info: Redefining \ref on input line 27.
+LaTeX Info: Redefining \pageref on input line 27.
  (./poster.out)
 (./poster.out)
 \@outlinefile=\write5
 \openout5 = `poster.out'.
 
-\AtBeginShipoutBox=\box54
+\AtBeginShipoutBox=\box58
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 25.
+(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 27.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 25.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 27.
 \symnumbers=\mathgroup6
 \sympureletters=\mathgroup7
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/cmr/m/n on input line 25.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 25.
+(Font)                  OT1/cmss/m/n --> OT1/cmr/m/n on input line 27.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 27.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 25.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 27.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 25.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 25.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 27.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 27.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/m/n on input line 25.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/m/n on input line 27.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/cmss/m/n on input line 25.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 25.
+(Font)                  OT1/cmss/bx/n --> OT1/cmss/m/n on input line 27.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 27.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> OT1/cmss/m/it on input line 25.
+(Font)                  OT1/cmr/m/it --> OT1/cmss/m/it on input line 27.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> OT1/cmss/m/it on input line 25.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 25.
+(Font)                  OT1/cmr/bx/it --> OT1/cmss/m/it on input line 27.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 27.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 25.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 27.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 25.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 27.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/bx/n on input line 25.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/bx/n on input line 27.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  OT1/cmss/m/it --> OT1/cmss/bx/it on input line 25.
+(Font)                  OT1/cmss/m/it --> OT1/cmss/bx/it on input line 27.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/cmr/bx/n on input line 25.
+(Font)                  OT1/cmss/bx/n --> OT1/cmr/bx/n on input line 27.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/cmss/bx/n on input line 25.
+(Font)                  OT1/cmss/bx/n --> OT1/cmss/bx/n on input line 27.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/bx/n on input line 25.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/bx/n on input line 27.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmss/m/it --> OT1/cmss/bx/it on input line 25.
+(Font)                  OT1/cmss/m/it --> OT1/cmss/bx/it on input line 27.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/bx/n on input line 25.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/bx/n on input line 27.
 
 (/usr/share/texmf/tex/latex/beamer/base/translator/dicts/translator-basic-dicti
 onary/translator-basic-dictionary-English.dict
@@ -1464,25 +1520,41 @@ Dictionary: translator-numbers-dictionary, Language: English
 (/usr/share/texmf/tex/latex/beamer/base/translator/dicts/translator-theorem-dic
 tionary/translator-theorem-dictionary-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
-) (./poster.nav)
+)
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+ (./poster.nav)
 Missing character: There is no â in font cmssbx10!
 Missing character: There is no € in font cmssbx10!
 Missing character: There is no ™ in font cmssbx10!
 File: unk_sig15_pos_294.eps Graphic file (type eps)
 
 <unk_sig15_pos_294.eps>
-LaTeX Font Info:    Calculating math sizes for size <49.76> on input line 70.
+LaTeX Font Info:    Calculating math sizes for size <34.56> on input line 100.
 
 
 LaTeX Font Warning: Font shape `OT1/cmss/bx/it' undefined
-(Font)              using `OT1/cmss/bx/n' instead on input line 70.
+(Font)              using `OT1/cmss/bx/n' instead on input line 100.
 
-LaTeX Font Info:    Calculating math sizes for size <41.48> on input line 70.
+File: pict1.eps Graphic file (type eps)
+<pict1.eps>
+LaTeX Font Info:    Calculating math sizes for size <49.76> on input line 100.
+ <alpha20120815.eps> <beta20120815.eps> <alpha20120815.eps>
+<beta20120815.eps>
+File: alpha20120815.eps Graphic file (type eps)
+ <alpha20120815.eps>
+File: beta20120815.eps Graphic file (type eps)
+ <beta20120815.eps>
+File: alphaTime.eps Graphic file (type eps)
+ <alphaTime.eps>
+File: betaTime.eps Graphic file (type eps)
+
+<betaTime.eps>
 Missing character: There is no â in font cmssbx10!
 Missing character: There is no € in font cmssbx10!
 Missing character: There is no ™ in font cmssbx10!
 File: unk_sig15_pos_294.eps Graphic file (type eps)
-<unk_sig15_pos_294.eps> [1
+ <unk_sig15_pos_294.eps> [1
 
 ]
 \tf@nav=\write6
@@ -1613,6 +1685,9 @@ fp-random.sty    1995/02/23
    array.sty    2008/09/09 v2.4c Tabular extension package (FMi)
 booktabs.sty    2005/04/14 v1.61803 publication quality tables
 tabularx.sty    1999/01/07 v2.07 `tabularx' package (DPC)
+ wrapfig.sty    2003/01/31  v 3.6
+floatrow.sty    2008/08/02 v0.3b floatrow: float package extension
+caption3.sty    2009/10/09 v3.1k caption3 kernel (AR)
  nameref.sty    2007/05/29 v2.31 Cross-referencing by name of section
 refcount.sty    2008/08/11 v3.1 Data extraction from references (HO)
   poster.out
@@ -1624,6 +1699,15 @@ translator-months-dictionary-English.dict
 translator-numbers-dictionary-English.dict    
 translator-theorem-dictionary-English.dict    
 unk_sig15_pos_294.eps    Graphic file (type eps)
+   pict1.eps    Graphic file (type eps)
+alpha20120815.eps    Graphic file (type eps)
+beta20120815.eps    Graphic file (type eps)
+alpha20120815.eps    Graphic file (type eps)
+beta20120815.eps    Graphic file (type eps)
+alpha20120815.eps    Graphic file (type eps)
+beta20120815.eps    Graphic file (type eps)
+alphaTime.eps    Graphic file (type eps)
+betaTime.eps    Graphic file (type eps)
 unk_sig15_pos_294.eps    Graphic file (type eps)
  ***********
 
@@ -1632,12 +1716,12 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 15585 strings out of 493849
- 284410 string characters out of 1152846
- 477554 words of memory out of 3000000
- 18428 multiletter control sequences out of 15000+50000
- 16372 words of font info for 62 fonts, out of 3000000 for 9000
+ 16704 strings out of 493849
+ 302436 string characters out of 1152846
+ 557162 words of memory out of 3000000
+ 19529 multiletter control sequences out of 15000+50000
+ 16847 words of font info for 64 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
- 49i,20n,66p,1179b,1234s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 54i,22n,92p,1186b,1331s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on poster.dvi (1 page, 68764 bytes).
+Output written on poster.dvi (1 page, 104152 bytes).
