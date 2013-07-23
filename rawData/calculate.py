@@ -1,4 +1,7 @@
 import sys
+import sqlite3
+import datetime
+
 
 #this function converts a string with the format HHMMSS to a decimal hour representation. This makes it easier to find the time difference in hours between two times
 def timeToHours(timeString):
@@ -12,7 +15,76 @@ BETACALIBRATION = 1.15
 
 
 def calculate(filename):
-#open file from system arguments
+	"""
+	This method calculates the rest of the columns for the radnet data
+	#Filter
+	#Start Date
+	#End Date
+	# Sample time
+	# sample volumen
+	"""
+	#open connection to database file
+	conn = sqlite3.connect("../sql/radnet.db")
+	cur = conn.cursor()
+	with open(filename,'r') as f:
+		#get initial values
+		filterNum = f.readline().rstrip()
+		startDate = f.readline().rstrip()
+		endDate = f.readline().rstrip()
+		sampleTime = f.readline().rstrip()
+		sampleVol = f.readline().rstrip()
+		
+		cur.execute("""SELECT * FROM Filter WHERE FilterNum = ?""", (filterNum,))
+		check = cur.fetchall()
+		if check == []:
+			for line in f:
+				#check if no line if len(line) != 0:
+					#check for comment lines
+					if line[0] != '#':
+						#Check if it's the initial value for time and set it
+						#this part is for the legacy typed data which didn't have the calibration numbers in the data textfile
+						if ',' not in line:
+							timeStart = timeToHours(line)
+							alphaCal = ALPHACALIBRATION
+							betaCal = BETACALIBRATION
+
+							#check database to see if alphaCal is in already
+							cur.execute("""SELECT * FROM AlphaEfficiency WHERE coefficient = ?""", (alphaCal,))
+							check = cur.fetchall()
+							if check == []:
+								cur.execute("""INSERT INTO AlphaEfficiency (Coefficient) VALUES (?)""", (alphaCal,))
+								conn.commit()
+
+							#get alphaCalID
+							cur.execute("""SELECT AlphaCoeffID from AlphaEfficiency WHERE Coefficient = ?""", (alphaCal,))
+							check = cur.fetchone()
+							alphaCalID = check[0]
+							print alphaCalID
+
+							#check database to see if betaCal is in already
+							cur.execute("""SELECT * FROM BetaEfficiency WHERE coefficient = ?""", (betaCal,))
+							check = cur.fetchall()
+							if check == []:
+								cur.execute("""INSERT INTO BetaEfficiency (Coefficient) VALUES (?)""", (betaCal,))
+								conn.commit()
+
+							#get betaCalID
+							cur.execute("""SELECT BetaCoeffID from BetaEfficiency WHERE Coefficient = ?""",(betaCal,))
+							check = cur.fetchone()
+							betaCalID = check[0]
+
+
+							#INSERT new filter row
+							for i in [(filterNum,startDate,endDate,sampleTime,sampleVol,timeStart,alphaCalID,betaCalID)]:
+								cur.execute("""INSERT INTO Filter (FilterNum, StartDate, EndDate, SampleTime, SampleVolume,TimeStart,AlphaCoeffID,BetaCoeffID) VALUES (?,?,?,?,?,?,?,?)""",i)
+							conn.commit()
+
+							stuff = '# Date: ' + sys.argv[1] + '\n# t_stop = ' + line + '# Alpha Calibration: ' + str(alphaCal) + '\n# Beta Calibration: ' + str(betaCal) + '\n'
+							print stuff
+
+
+"""
+	#open file from system arguments
 	with open(filename,'r') as f:
 		with open(filename + 'Activity','w') as w:
 			for line in f:
@@ -66,6 +138,6 @@ def calculate(filename):
 
 			w.close()
 		f.close()
-
+"""
 if __name__ == "__main__":
 	calculate(sys.argv[1])

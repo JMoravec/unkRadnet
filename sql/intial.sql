@@ -1,7 +1,7 @@
 PRAGMA foreign_keys = ON;
 
 CREATE TABLE AlphaEfficiency(
-	ID INTEGER PRIMARY KEY, 
+	AlphaCoeffID INTEGER PRIMARY KEY, 
 	Coefficient FLOAT
 );
 
@@ -15,7 +15,9 @@ CREATE TABLE Filter(
 	FilterNum INTEGER UNIQUE, 
 	StartDate DATETIME, 
 	EndDate DATETIME, 
-	TimeStart INTEGER,
+	SampleTime FLOAT,
+	SampleVolume FLOAT,
+	TimeStart FLOAT,
 	AlphaCoeffID INTEGER,
 	BetaCoeffID INTEGER,
 	FOREIGN KEY(AlphaCoeffID) REFERENCES AlphaEfficiency(ID), 
