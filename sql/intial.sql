@@ -30,6 +30,7 @@ CREATE TABLE RawData(
 	Time INTEGER, 
 	AlphaReading FLOAT, 
 	BetaReading FLOAT,
+	CleanFilterCount FLOAT,
 	FOREIGN KEY(FilterID) REFERENCES Filter(FilterID)
 );
 

@@ -1,22 +1,23 @@
+"""This module allows the user to convert a file to a SQLite3 database (../sql/radnet.db) It will also calculate the activity from the alpha/beta calibration numbers as well as insert that data into the database"""
 import sys
 import sqlite3
 import datetime
 
 
-#this function converts a string with the format HHMMSS to a decimal hour representation. This makes it easier to find the time difference in hours between two times
 def timeToHours(timeString):
+"""This function converts a string with the format HHMMSS to a decimal hour representation. This makes it easier to find the time difference in hours between two times"""
 	time = float(timeString[0:2]) + float(timeString[2:4])/60.0 + float(timeString[4:6])/3600
 	return time
 
 
-# set calibration numbers if not in the data table!!
+# set calibration numbers if not in the data table
 ALPHACALIBRATION = 1.63
 BETACALIBRATION = 1.15
 
 
 def calculate(filename):
 	"""
-	This method calculates the rest of the columns for the radnet data
+	This method calculates the rest of the columns for the radnet data (format for the first few lines):
 	#Filter
 	#Start Date
 	#End Date
@@ -47,7 +48,10 @@ def calculate(filename):
 							timeStart = timeToHours(line)
 							alphaCal = ALPHACALIBRATION
 							betaCal = BETACALIBRATION
+						elif len(line.split(',')) == 3:
+							timeStart,alphaCal,betaCal = line.rstrip().split(',')
 
+						if ',' not in line or len(line.split(',')) == 3:
 							#check database to see if alphaCal is in already
 							cur.execute("""SELECT * FROM AlphaEfficiency WHERE coefficient = ?""", (alphaCal,))
 							check = cur.fetchall()
@@ -59,7 +63,6 @@ def calculate(filename):
 							cur.execute("""SELECT AlphaCoeffID from AlphaEfficiency WHERE Coefficient = ?""", (alphaCal,))
 							check = cur.fetchone()
 							alphaCalID = check[0]
-							print alphaCalID
 
 							#check database to see if betaCal is in already
 							cur.execute("""SELECT * FROM BetaEfficiency WHERE coefficient = ?""", (betaCal,))
@@ -74,47 +77,50 @@ def calculate(filename):
 							betaCalID = check[0]
 
 
-							#INSERT new filter row
-							for i in [(filterNum,startDate,endDate,sampleTime,sampleVol,timeStart,alphaCalID,betaCalID)]:
-								cur.execute("""INSERT INTO Filter (FilterNum, StartDate, EndDate, SampleTime, SampleVolume,TimeStart,AlphaCoeffID,BetaCoeffID) VALUES (?,?,?,?,?,?,?,?)""",i)
-							conn.commit()
+							
+							#INSERT new filter row if no previous filter was there
+							cur.execute("""SELECT * FROM Filter WHERE filterNum = ?""", (filterNum,))
+							if cur.fetchall() == []:
+								for i in [(filterNum,startDate,endDate,sampleTime,sampleVol,timeStart,alphaCalID,betaCalID)]:
+									cur.execute("""INSERT INTO Filter (FilterNum, StartDate, EndDate, SampleTime, SampleVolume,TimeStart,AlphaCoeffID,BetaCoeffID) VALUES (?,?,?,?,?,?,?,?)""",i)
+								conn.commit()
+							else:
+								print "No filter entry was created for " + startDate + "-" + endDate
+
+							#get filterID
+							cur.execute("""SELECT FilterID FROM Filter WHERE filterNum = ?""", (filterNum,))
+							filterID = cur.fetchone()
+							filterID = filterID[0]
 
 							stuff = '# Date: ' + sys.argv[1] + '\n# t_stop = ' + line + '# Alpha Calibration: ' + str(alphaCal) + '\n# Beta Calibration: ' + str(betaCal) + '\n'
 							print stuff
 
-
-"""
-	#open file from system arguments
-	with open(filename,'r') as f:
-		with open(filename + 'Activity','w') as w:
-			for line in f:
-				if len(line) != 0:
-					#check for commented lines
-					if line[0] != '#':
-						#Check if it's the initital value for time and set it
-						#this part is for the legacy typed data which didn't have the calibration numbers in the data textfile
-						if ',' not in line:
-							timeStart = timeToHours(line)
-							alphaCal = ALPHACALIBRATION
-							betaCal = BETACALIBRATION
-							stuff = '# Date: ' + sys.argv[1] + '\n# t_stop = ' + line + '# Alpha Calibration: ' + str(alphaCal) + '\n# Beta Calibration: ' + str(betaCal) + '\n'
-							w.write(stuff)
-							print stuff
-						elif len(line.split(',')) == 3:
-							timeStart,alphaCal,betaCal = line.split(',') 
-							stuff = '# Date: ' + sys.argv[1] + '\n# t_stop = ' + timeStart + '\n# Alpha Calibration: ' + str(alphaCal) + '\n# Beta Calibration: ' + str(float(betaCal)) + '\n'
-							timeStart = timeToHours(timeStart)
-							alphaCal = float(alphaCal)
-							betaCal = float(betaCal)
-							w.write(stuff)
-							print stuff
 						else:
-							#Set the values for each line.
-							time,det2,cfc,det1 = line.split(',')
+							#Set the values for each line
+							#det2 is beta+Alpha reading
+							#det1 is alpha reading
+							#cfc is clean filter count
+							time,det2,cfc,det1 = line.rstrip().split(',')
 							time = timeToHours(time)
 							det2 = int(det2)
 							cfc = int(cfc)
 							det1 = int(det1)
+
+							#write this line into the database
+							for i in [(filterID, time)]:
+								cur.execute("""SELECT * FROM RawData WHERE FilterID = ? AND Time = ?""", i)
+							if cur.fetchall() == []:
+								for i in [(filterID, time, det1, det2, cfc)]:
+									cur.execute("""INSERT INTO RawData (FilterID, Time, AlphaReading, BetaReading, CleanFilterCount) VALUES (?,?,?,?,?)""", i)
+									conn.commit()
+
+							#get rawDataID
+							for i in [(filterID, time)]:
+								cur.execute("""SELECT RawDataID FROM RawData WHERE FilterID = ? AND Time = ?""", i)
+							rawDataID = cur.fetchone()
+							rawDataID = rawDataID[0]
+
+
 
 							#Calculate the other variables for each reading
 							netAB = det2 - cfc
@@ -127,17 +133,21 @@ def calculate(filename):
 								time += 24.0
 
 							timeDiff = time - timeStart
-							#set the string for print to file and screen
-							stuff = str(timeDiff) + ',' + str(alphaActivity) + ',' + str(timeDiff) + ',' + str(betaActivity) 
-							printStuf = str(alphaActivity) + ' , ' + str(betaActivity) + ' , ' + str(timeDiff)
-							print(printStuf)
-							stuff += '\n'
-							w.write(stuff)
+
+							#set the string for print to screen
+							printStuff = str(alphaActivity) + ' , ' + str(betaActivity) + ' , ' + str(timeDiff)
+
+							#write to database
+							for i in [(filterID, rawDataID)]:
+								cur.execute("""SELECT * FROM Activity WHERE FilterID = ? AND RawDataID = ?""", i)
+							if cur.fetchall() == []:
+								for i in [(filterID, rawDataID, timeDiff, alphaActivity, betaActivity)]:
+									cur.execute("""INSERT INTO Activity(FilterID, RawDataID, DeltaT, AlphaAct, BetaAct) VALUES (?,?,?,?,?)""",i)
 
 
+							print printStuff
+		print "File processed succesfully"
 
-			w.close()
-		f.close()
-"""
+
 if __name__ == "__main__":
 	calculate(sys.argv[1])
