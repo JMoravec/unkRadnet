@@ -1,25 +1,13 @@
-This folder/program contains the information for the final product. Most of the folder will be occupied by individual date ranges. These files are generated from 'calculate.py' in the ../rawData folder. 
-
-As the files in this folder follow a very specific format, I do not suggest typing them by hand. Instead, use the previously mentioned program to generate the files and then check the numbers with the hard copy in the notebook.
+Fits the data from a filter to a double exponential curve
 
 RUNNING THE PROGRAM:
 simply run:
-	'python splitData.py [filename]'
+	'python splitData.py [filterID]'
+	to get the filterid, you'll need to use sql (filter table)
 
-This will print the coefficients to file as well as append a line to the files alphaCoefficients and betaCoefficiens. 
-
-The program has no idea what the two coefficient files have in them, it simply appends the data. BE CAREFUL OF RE-ADDING DATA!!
-
-NOTE: Due to an oversight in the code, the data is mislabeld in the has in the data range 20110627-20120202.
-The correct organization is:
-t-t_stop (hr), Alpha Activity (pCi),t-t_stop, Beta Activity (pCi)
+This will print the coefficients to file as well as add the data to the database
 
 DEPENDENCIES:
 You will need to have an installation of numpy and scipy on your computer to run the python program. This depencency is from the zunzun.com code and is necessary for the curve fitting (you'll get an error if you don't have it)
 On Ubuntu:
 	'apt-get install python-numpy python-scipy'
-
-FILE FORMAT:
-The file format for the *Activity files are as follows:
-# Lines with '#' are ignored.
-t-t_stop (hr), Alpha Activity (pCi),t-t_stop, Beta Activity (pCi)

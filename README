@@ -2,37 +2,37 @@ These files are for the University of Nebraska at Kearney Physics Radnet researc
 
 The project licence for the code and data for the project can be found in LICENCE.txt in the home folder. For the curve fitting data code we used zunzun.com's code. That unmodified code and the licence for that project may be found in the ./zunzunCode/pythonequations folder.
 
-We modified an executing python file from the zunzunCode which fits the data to a double exponential curve. This file can be found in the ./fitToCurve folder with a name of splitData.py.
 
 DEPENDENCIES:
-	For calculate.py, the only dependency is to have python
-	For SplitData.py you will need to have python, numpy, and scipy installed 
+	For calculate.py, the only dependency is to have python (2.7+, haven't tested on python3)
+	For fitToCurve.py you will need to have python, numpy, and scipy installed 
 		For Ubuntu based:
 		'apt-get install python-numpy python-scipy '
 		should get the python libraries it working.
-	For start.py you will need all the above dependencies.
 
 TO RUN:
-	simply run (without the quotes):
-		'python start.py [dataFile]'
+	Add the file to rawData folder and run:
+		python calculate.py [filename]
+	After a succesful upload run:
+		sqlite3 ../sql/radnet.db
+		SELECT FilterID FROM Filter WHERE StartDate = [startDate]
+		.exit
+		cd ../fitToCurve
+		python fitToCurve.py [filterid from before]
 
 CREATING A NEW DATAFILE:
 	Create a new file using the file name of '[start date]-[end date]' without the quotes. The date should be the same format of the 'Sampled Days' from the notebook, YYYYMMDD, eg. 20120129-20120202 for the range Jan. 29 2012 - Feb. 02 2012. It should also be in the same folder as start.py. The program will move it to rawData after success.
 
 DATAFILE FORMAT:
-Every line beginning with a '#' will be ignored. Use this for comments
 All data entries should be numbers only.
+
 Format:
-# Filter number
-# Start Date YYYYMMDD
-# End date   YYYYMMDD
-# Sample Time (in hours)
-# Sample Volume (in m^3)
+Filter number
+Start Date YYYYMMDD
+End date   YYYYMMDD
+Sample Time (in hours)
+Sample Volume (in m^3)
 t_stop (HHMMSS),alpha Calibration Number, Beta Calibration Number
 t (HHMMSS),DET2(betaAlpha#),CFC,DET1(alpha#)
 
-FOR THE LOVE OF GOD DON'T PUT SPACES IN-BETWEEN THE NUMBERS
-
 For more information on the data entry and the calculate.py program see the README in the ./rawData folder.
-
-While start.py is much easier to use, you can still use the seperate programs in the ./rawData and ./fitToCurve folders. See their own respective README files for more information.

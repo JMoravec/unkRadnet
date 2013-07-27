@@ -8,14 +8,12 @@ SECOND: ENTER THE DATA
 
 The format is shown at the bottom of this page. 
 
-NOTE: THE FORMAT IS VERY PICKY. So follow the format exactly, or you WILL get errors or miscalculations.
+NOTE: THE FORMAT IS VERY PICKY. So follow the format exactly.
 
 
+#This shouldn't be a problem anymore, but haven't tested it
 SECOND NOTE: USE A TEXT EDITOR WITH A '\n' NEWLINE RETURN. THIS IS HARDCODED IN THE PROGRAM
 Basically this means don't use Windows to type these files (Probably could be easily fixed, but I'm not as familiar with Windows and don't want to take the time to look it up when it works fine on *nix systems). Also make sure to use a text editor and not Office or something similar. 
-
-(This one may not matter as much since I ported the code to python. I haven't looked much into how it reads the lines. But just to be safe, type it in linux.)
-
 
 THIRD: RUN THE PROGRAM
 
@@ -27,25 +25,17 @@ FOURTH: CHECK OUTPUT WITH DATA BOOK
 This will print the relevant data to the screen to double check the data with the hard copy (the data is truncated when printed to the screen for easier reading)
 This datafile is then used with the other python program to determine the coefficients and the constants
 
-FIFTH: MOVE THE RESULTING FILE TO THE PROPER PLACE
-
-The resulting file will be named: 'STARTDATE-ENDDATEActivity'. You're probably going to wwant to move it to the fitToCurve folder to run the splitData.py program on it to get the coeffition numbers for the double exponential.
-To move in Linux, just use your favorite file manager to drag and drop, or if using the terminal:
-	'mv [filename] [destination]'
-will work. If using the terminal and moving lots of data, using the wildcard '*' character will help a lot. eg. 'mv *Activity ../foobar' will move everything that ends with 'Activity' to the directory 'foobar' in one directory up from where you are.
 
 FILE FORMAT:
-Every line beginning with a '#' will be ignored. Use this for comments
 Format:
-# Filter number
-# Start Date YYYYMMDD
-# End date   YYYYMMDD
-# Sample Time (in hours)
-# Sample Volume (in m^3)
+Filter number
+Start Date YYYYMMDD
+End date   YYYYMMDD
+Sample Time (in hours)
+Sample Volume (in m^3)
 t_stop (HHMMSS),alpha Calibration Number, Beta Calibration Number
 t (HHMMSS),DET2(betaAlpha#),CFC,DET1(alpha#)
 
-FOR THE LOVE OF GOD DON'T PUT SPACES IN-BETWEEN THE NUMBERS
 
 DEPENDENCIES:
-You just need python, most Linux distros should ship with it.
+You just need python (2.7+, not sure if it works with 3.x yet), most Linux distros should ship with it.
