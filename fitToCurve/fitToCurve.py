@@ -13,7 +13,7 @@ def fitToCurve(filterID):
 	equation = pyeq2.Models_2D.Exponential.DoubleExponential()
 
 	#establish connection to database file
-	conn = sqlite3.connect("../sql/test.db")
+	conn = sqlite3.connect("../sql/radnet.db")
 	cur = conn.cursor()
 
 	#get filterid if filterNum was entered
