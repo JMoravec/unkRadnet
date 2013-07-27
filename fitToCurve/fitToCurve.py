@@ -9,7 +9,7 @@ if os.path.join(sys.path[0][:sys.path[0].rfind(os.sep)], '../..') not in sys.pat
     sys.path.append(os.path.join(sys.path[0][:sys.path[0].rfind(os.sep)], '../..'))
 import pyeq2
 
-def fitToCurve(filterNum, filterID = None):
+def fitToCurve(filterID):
 	equation = pyeq2.Models_2D.Exponential.DoubleExponential()
 
 	#establish connection to database file
@@ -17,10 +17,14 @@ def fitToCurve(filterNum, filterID = None):
 	cur = conn.cursor()
 
 	#get filterid if filterNum was entered
+	"""
 	if filterID == None:
-		cur.execute("""SELECT FilterID FROM Filter WHERE FilterNum = ?""", (filterNum,))
+		cur.execute(SELECT FilterID FROM Filter WHERE FilterNum = ?, (filterNum,))
 		filterID = cur.fetchone()
 		filterID = int(filterID[0])
+	else:
+	"""
+	filterID = int(filterID)
 
 	# What this section does is reads the data from the file given from the initial argument and formats it so the zunzun.com code can read it. We need two separate Strings so we can have two equations found.
 	alpha = 'X\tY\n'

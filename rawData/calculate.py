@@ -151,6 +151,7 @@ def calculate(filename):
 
 
 		print "File processed succesfully"
+		conn.close()
 
 
 if __name__ == "__main__":
