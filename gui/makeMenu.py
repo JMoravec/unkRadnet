@@ -2,7 +2,7 @@ from tkinter import *
 from tkinter.messagebox import *
 
 def notDone():
-	showerrror('Not implemented', 'Not yet available')
+	showerror('Not implemented', 'Not yet available')
 
 def makeMenu(win):
 	top = Menu(win)
