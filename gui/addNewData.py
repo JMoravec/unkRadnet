@@ -25,9 +25,32 @@ def addRow(win, lineEnts):
 	lineEnts.append([entTime, entDet2, entCfc, entDet1])
 
 def calculate(win, lineEnts, headerEnts):
-	timeStart = headerEnts[5].get()
+	try:
+		filterNum = int(headerEnts[0].get())
+		startDate = headerEnts[1].get()
+		endDate = headerEnts[2].get()
+		sampleTime = float(headerEnts[3].get())
+		sampleVol = float(headerEnts[4].get())
+		timeStart = headerEnts[5].get()
+		alphaCal = float(headerEnts[6].get())
+		betaCal = float(headerEnts[7].get())
+	except:
+		print 'change fields to numbers'
+		return
+
 	if not isTimeFormat(timeStart):
 		print 'That string is no good'
+		return 
+
+	if not isDateFormat(startDate):
+		print 'change to correct date format'
+		return
+
+	if not isDateFormat(endDate):
+		print 'change to correct date format'
+		return
+
+
 
 def addNewData():
 	win = Toplevel()
@@ -112,9 +135,16 @@ def timeToHours(timeString):
 	time = float(timeString[0:2]) + float(timeString[2:4])/60.0 + float(timeString[4:6])/3600
 	return time
 
-def isTimeFormat(input):
+def isTimeFormat(stuff):
 	try:
-		time.strptime(input, '%H%M%S')
+		time.strptime(stuff, '%H%M%S')
+		return True
+	except ValueError:
+		return False
+
+def isDateFormat(stuff):
+	try:
+		time.strptime(stuff, '%Y-%m-%d')
 		return True
 	except ValueError:
 		return False
