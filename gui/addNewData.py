@@ -7,6 +7,7 @@ import time
 def exit(win):
 	win.destroy()
 
+
 def addRow(win, lineEnts):
 	currentColumn, currentRow = win.grid_size()
 	
@@ -23,6 +24,7 @@ def addRow(win, lineEnts):
 	entDet1.grid(row=(currentRow), column=9)
 
 	lineEnts.append([entTime, entDet2, entCfc, entDet1])
+
 
 def calculate(win, lineEnts, headerEnts):
 	try:
@@ -97,10 +99,49 @@ def calculate(win, lineEnts, headerEnts):
 	cur.execute("""SELECT FilterID FROM Filter WHERE filterNum = ?""", (filterNum,))
 	filterID = cur.fetchone()[0]
 
-	stuff = '# Date: ' + sys.argv[1] + '\n# t_stop = ' + str(timeStart) + '\n# Alpha Calibration: ' + str(alphaCal) + '\n# Beta Calibration: ' + str(betaCal) + '\n'
+	stuff = '# Date: ' + endDate + '\n# t_stop = ' + str(timeStart) + '\n# Alpha Calibration: ' + str(alphaCal) + '\n# Beta Calibration: ' + str(betaCal) + '\n'
 	print stuff
 
+	for row in lineEnts:
+		#get row of data
+		time = timeToHours(row[0].get())
+		det2 = int(row[1].get())
+		cfc = int(row[2].get())
+		det1 = int(row[3].get())
 
+		#write this line into the database
+		for i in [(filterID, time)]:
+			cur.execute("""SELECT * FROM RawData WHERE FilterID = ? AND Time =?""", i)
+		if cur.fetchall() == []:
+			for i in [(filterID, time, det1, det2, cfc)]:
+				cur.execute("""INSERT INTO RawData (FilterID, Time, AlphaReading, BetaReading, CleanFilterCount) VALUES (?,?,?,?,?)""", i)
+			conn.commit()
+
+		#get rawDataID
+		for i in [(filterID, time)]:
+			cur.execute("""SELECT RawDataID FROM RawData WHERE FilterID = ? AND Time =?""", i)
+		rawDataID = cur.fetchone()[0]
+
+		netAB = det2 - cfc
+		netBeta = netAB - det1
+		alphaActivity = det1 * alphaCal
+		betaActivity = netBeta * betaCal
+
+		#in case readings were taken on the next day
+		if time < timeStart:
+			time += 24.0
+
+		timeDiff = time - timeStart
+
+		#write to database
+		for i in [(filterID, rawDataID)]:
+			cur.execute("""SELECT * FROM Activity WHERE FilterID = ? AND RawDataID = ?""", i)
+		if cur.fetchall() == []:
+			for i in [(filterID, rawDataID, timeDiff, alphaActivity, betaActivity)]:
+				cur.execute("""INSERT INTO Activity(FilterID, RawDataID, DeltaT, AlphaAct, BetaAct) VALUES (?,?,?,?,?)""", i)
+				conn.commit()
+				printStuff = str(alphaActivity) + ' , ' + str(betaActivity) + ' , ' + str(timeDiff)
+				print printStuff
 
 
 def addNewData():
@@ -181,10 +222,12 @@ def addNewData():
 	win.grab_set()
 	win.wait_window()
 
+
 def timeToHours(timeString):
 	"""This function converts a string with the format HHMMSS to a decimal hour representation. This makes it easier to find the time difference in hours between two time"""
 	time = float(timeString[0:2]) + float(timeString[2:4])/60.0 + float(timeString[4:6])/3600
 	return time
+
 
 def isTimeFormat(stuff):
 	try:
@@ -193,12 +236,14 @@ def isTimeFormat(stuff):
 	except ValueError:
 		return False
 
+
 def isDateFormat(stuff):
 	try:
 		time.strptime(stuff, '%Y-%m-%d')
 		return True
 	except ValueError:
 		return False
+
 
 if __name__ == '__main__':
 	root = Tk()

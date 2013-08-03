@@ -113,7 +113,7 @@ def calculate(filename):
 						if cur.fetchall() == []:
 							for i in [(filterID, time, det1, det2, cfc)]:
 								cur.execute("""INSERT INTO RawData (FilterID, Time, AlphaReading, BetaReading, CleanFilterCount) VALUES (?,?,?,?,?)""", i)
-								conn.commit()
+							conn.commit()
 
 						#get rawDataID
 						for i in [(filterID, time)]:
@@ -134,8 +134,6 @@ def calculate(filename):
 							time += 24.0
 
 						timeDiff = time - timeStart
-
-						#set the string for print to screen
 
 						#write to database
 						for i in [(filterID, rawDataID)]:
