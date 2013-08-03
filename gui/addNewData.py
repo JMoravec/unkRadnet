@@ -218,10 +218,15 @@ def addNewData():
 	butCalc = Button(win, text='Calculate',command=lambda: calculate(win, lineEnts, headerEnts))
 	butCalc.grid(row=2,column=1)
 
+	win.bind('<KP_Enter>', lambda event, arg = lineEnts: onReturnKey(event, arg, win))
+
 	win.focus_set()
 	win.grab_set()
 	win.wait_window()
 
+
+def onReturnKey(event, lineEnts, win):
+	addRow(win, lineEnts)
 
 def timeToHours(timeString):
 	"""This function converts a string with the format HHMMSS to a decimal hour representation. This makes it easier to find the time difference in hours between two time"""
