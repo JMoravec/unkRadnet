@@ -1,7 +1,7 @@
 import sys
 from Tkinter import *
 import sqlite3
-import datetime
+from datetime import datetime
 import time
 
 def exit(win):
@@ -49,6 +49,57 @@ def calculate(win, lineEnts, headerEnts):
 	if not isDateFormat(endDate):
 		print 'change to correct date format'
 		return
+
+	startDate = datetime.strptime(startDate, "%Y-%m-%d")
+	startDate = startDate.strftime("%Y%m%d")
+	endDate = datetime.strptime(endDate, "%Y-%m-%d")
+	endDate = endDate.strftime("%Y%m%d")
+
+	timeStart = timeToHours(timeStart)
+
+	conn = sqlite3.connect("../sql/test.db")
+	cur = conn.cursor()
+
+	#INSERT new filter row if no previous filter was there
+	cur.execute("""SELECT * FROM Filter WHERE filterNum = ?""", (filterNum,))
+	if cur.fetchall() != []:
+		print 'This filter already exists in the database'
+		return
+	
+	#check database to see if alphaCal is in already
+	cur.execute("""SELECT * FROM AlphaEfficiency WHERE coefficient = ?""", (alphaCal,))
+	check = cur.fetchall()
+	if check == []:
+		cur.execute("""INSERT INTO AlphaEfficiency (Coefficient) VALUES (?)""", (alphaCal,))
+		conn.commit()
+
+	#get alphaCalID
+	cur.execute("""SELECT AlphaCoeffID from AlphaEfficiency WHERE Coefficient = ?""", (alphaCal,))
+	check = cur.fetchone()
+	alphaCalID = check[0]
+
+	#check database to see if betaCal is in already
+	cur.execute("""SELECT * FROM BetaEfficiency WHERE coefficient = ?""", (betaCal,))
+	check = cur.fetchall()
+	if check == []:
+		cur.execute("""INSERT INTO BetaEfficiency (Coefficient) VALUES (?)""", (betaCal,))
+		conn.commit()
+
+	#get betaCalID
+	cur.execute("""SELECT BetaCoeffID from BetaEfficiency WHERE Coefficient = ?""", (betaCal,))
+	check = cur.fetchone()
+	betaCalID = check[0]
+
+	for i in [(filterNum, startDate, endDate, sampleTime, sampleVol, timeStart, alphaCalID, betaCalID)]:
+		cur.execute("""INSERT INTO Filter (FilterNum, StartDate, EndDate, SampleTime, SampleVolume, TimeStart, AlphaCoeffID, BetaCoeffID) VALUES (?,?,?,?,?,?,?,?)""", i)
+	conn.commit()
+
+	cur.execute("""SELECT FilterID FROM Filter WHERE filterNum = ?""", (filterNum,))
+	filterID = cur.fetchone()[0]
+
+	stuff = '# Date: ' + sys.argv[1] + '\n# t_stop = ' + str(timeStart) + '\n# Alpha Calibration: ' + str(alphaCal) + '\n# Beta Calibration: ' + str(betaCal) + '\n'
+	print stuff
+
 
 
 
